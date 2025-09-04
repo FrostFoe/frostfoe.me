@@ -1,8 +1,25 @@
-import createMDX from "@next/mdx";
-import withBundleAnalyzer from "@next/bundle-analyzer";
+const createMDX = require("@next/mdx");
+const withBundleAnalyzer = require("@next/bundle-analyzer");
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      }
+    ],
+  },
 };
 
 const withMDX = createMDX({});
@@ -12,4 +29,4 @@ const bundleAnalyzerConfig = withBundleAnalyzer({
   openAnalyzer: false,
 });
 
-export default bundleAnalyzerConfig(withMDX(nextConfig));
+module.exports = bundleAnalyzerConfig(withMDX(nextConfig));
