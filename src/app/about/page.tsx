@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -71,7 +72,7 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
         >
-          <Avatar className="mx-auto h-32 w-32 border-2 border-primary/20">
+          <Avatar className="mx-auto h-24 w-24 md:h-32 md:w-32 border-2 border-primary/20">
             <AvatarImage
               src={author.avatar}
               alt={author.name}
@@ -79,10 +80,10 @@ export default function AboutPage() {
             />
             <AvatarFallback>{author.name.charAt(0)}</AvatarFallback>
           </Avatar>
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl">
+          <h1 className="mt-6 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             {author.name}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
             {about.intro}
           </p>
           <div className="mt-6 flex justify-center gap-6 text-muted-foreground">
@@ -93,13 +94,14 @@ export default function AboutPage() {
                   key={social.name}
                   href={social.url}
                   className="transition-colors hover:text-primary"
+                  aria-label={social.name}
                 >
                   <MotionDiv
                     whileHover={{ scale: 1.2, rotate: -8, z: 10 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    {Icon && <Icon className="h-6 w-6" />}
+                    {Icon && <Icon className="h-5 w-5 md:h-6 md:w-6" />}
                   </MotionDiv>
                 </Link>
               );
@@ -200,19 +202,19 @@ export default function AboutPage() {
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <Card className="h-full text-center transition-shadow duration-300">
-                    <CardContent className="p-8">
+                    <CardContent className="p-6 md:p-8">
                       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
                         {ServiceIcon && (
-                          <ServiceIcon className="text-primary h-7 w-7" />
+                          <ServiceIcon className="text-primary h-6 w-6 md:h-7 md:w-7" />
                         )}
                       </div>
-                      <h3 className="mt-6 text-xl font-bold">
+                      <h3 className="mt-6 text-lg md:text-xl font-bold">
                         {service.title}
                       </h3>
-                      <p className="mt-2 text-muted-foreground">
+                      <p className="mt-2 text-sm md:text-base text-muted-foreground">
                         {service.description}
                       </p>
-                      <ul className="mt-6 space-y-3 text-left">
+                      <ul className="mt-6 space-y-3 text-left text-sm md:text-base">
                         {service.items.map((item) => (
                           <li key={item} className="flex items-start">
                             <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary" />
@@ -285,10 +287,10 @@ export default function AboutPage() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <AccordionItem value={`item-${index + 1}`}>
-                    <AccordionTrigger className="text-left hover:no-underline">
+                    <AccordionTrigger className="text-left hover:no-underline text-base">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
+                    <AccordionContent className="text-muted-foreground text-sm">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>

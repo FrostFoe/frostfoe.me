@@ -1,10 +1,11 @@
+
 "use client";
 import { motion } from "framer-motion";
 
 export function AnimatedTitle({ text }: { text: string }) {
   const words = text.split(" ");
   return (
-    <h1 className="text-4xl font-extrabold tracking-tighter md:text-6xl">
+    <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
       {words.map((word, index) => (
         <motion.span
           key={index}

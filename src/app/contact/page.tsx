@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -93,16 +94,16 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
           >
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
               {contactConfig.title}
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
               {contactConfig.description}
             </p>
           </MotionDiv>
 
           <MotionDiv
-            className="mx-auto mt-16 max-w-2xl rounded-xl border border-border/50 bg-card p-8 shadow-lg"
+            className="mx-auto mt-12 md:mt-16 max-w-2xl rounded-xl border border-border/50 bg-card p-6 md:p-8 shadow-lg"
             variants={itemVariant}
             initial="hidden"
             whileInView="show"
@@ -114,14 +115,14 @@ export default function ContactPage() {
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
                 <MotionDiv
-                  className="space-y-8"
+                  className="space-y-6 md:space-y-8"
                   variants={staggerContainer}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.2 }}
                   style={{ perspective: "1000px" }}
                 >
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
                     <MotionDiv variants={itemVariant}>
                       <FormField
                         control={form.control}
@@ -242,6 +243,7 @@ export default function ContactPage() {
               <Link
                 href={`mailto:${author.email}`}
                 className="transition-colors hover:text-primary"
+                aria-label="Email"
               >
                 <MotionDiv
                   whileHover={{ scale: 1.2, y: -2, rotate: 5, z: 10 }}
@@ -257,6 +259,7 @@ export default function ContactPage() {
                     key={social.name}
                     href={social.url}
                     className="transition-colors hover:text-primary"
+                    aria-label={social.name}
                   >
                     <MotionDiv
                       whileHover={{ scale: 1.2, rotate: -8, z: 10 }}

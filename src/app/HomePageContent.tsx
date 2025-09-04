@@ -1,18 +1,21 @@
+
+"use client";
+
 import { siteConfig } from "@/content/config";
 import type { Post } from "@/lib/types";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Rss } from "lucide-react";
 import PostCard from "@/components/blog/PostCard";
 import { AnimatedTitle } from "@/components/ui/animated-title";
 import { MotionDiv } from "@/components/blog/Motion";
 import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
 
 const ParticlesContainer = dynamic(
   () =>
     import("@/components/ui/particles-container").then(
-      (mod) => mod.ParticlesContainer,
+      (mod) => mod.ParticlesContainer as ComponentType,
     ),
   { ssr: false },
 );
@@ -53,14 +56,14 @@ export default function HomePageContent({
     <div className="font-sans text-foreground">
       <div className="relative">
         <ParticlesContainer />
-        <div className="container mx-auto px-4 pt-24 pb-16 text-center lg:pt-32 lg:pb-24">
+        <div className="container mx-auto px-4 pt-20 pb-16 text-center md:pt-24 lg:pt-32 lg:pb-24">
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <AnimatedTitle text={homeConfig.hero.title} />
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-xl">
               {homeConfig.hero.description}
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -105,7 +108,7 @@ export default function HomePageContent({
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
                 {homeConfig.latestArticles.title}
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-base text-muted-foreground md:text-lg">
                 {homeConfig.latestArticles.description}
               </p>
             </MotionDiv>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -44,17 +45,17 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <MotionDiv
           id="newsletter"
-          className="newsletter-bg-pattern relative mx-auto max-w-4xl rounded-2xl border border-border p-8 text-center md:p-12"
+          className="newsletter-bg-pattern relative mx-auto max-w-4xl rounded-2xl border border-border p-6 text-center md:p-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
               {footer.newsletter.title}
             </h2>
-            <p className="mt-2 max-w-lg mx-auto text-muted-foreground">
+            <p className="mt-2 max-w-lg mx-auto text-sm md:text-base text-muted-foreground">
               {footer.newsletter.description}
             </p>
             <form

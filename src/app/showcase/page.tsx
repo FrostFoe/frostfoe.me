@@ -1,31 +1,10 @@
+
 "use client";
 
 import Image from "next/image";
-import Link from "next/link"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { Card, CardContent } from "@/components/ui/card";
 import { MotionDiv, MotionLink } from "@/components/blog/Motion";
-import type { Metadata } from "next";
 import { ArrowUpRight, Rocket } from "lucide-react";
-
-const containerVariant = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariant = {
-  hidden: { opacity: 0, y: 20, rotateX: -20, transformOrigin: "bottom" },
-  visible: {
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    transition: { type: "spring", stiffness: 100, damping: 15 },
-  },
-};
 
 const showcaseItems = [
   {
@@ -72,6 +51,26 @@ const showcaseItems = [
   },
 ];
 
+const containerVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20, rotateX: -20, transformOrigin: "bottom" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: { type: "spring", stiffness: 100, damping: 15 },
+  },
+};
+
 export default function ShowcasePage() {
   return (
     <div className="bg-background text-foreground">
@@ -82,17 +81,17 @@ export default function ShowcasePage() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
         >
-          <h1 className="inline-flex items-center gap-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            My Showcase <Rocket className="h-10 w-10" />
+          <h1 className="inline-flex items-center gap-2 sm:gap-4 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+            My Showcase <Rocket className="h-8 w-8 sm:h-10 sm:w-10" />
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base md:text-lg text-muted-foreground">
             A selection of projects that I&apos;m proud of. Each one represents
             a unique challenge and a story of creative problem-solving.
           </p>
         </MotionDiv>
 
         <MotionDiv
-          className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-12 md:mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
           variants={containerVariant}
           initial="hidden"
           whileInView="visible"
@@ -134,11 +133,11 @@ export default function ShowcasePage() {
                         damping: 15,
                       }}
                     >
-                      <h3 className="flex items-center justify-between text-xl font-bold">
+                      <h3 className="flex items-center justify-between text-lg md:text-xl font-bold">
                         {item.title}
                         <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
                       </h3>
-                      <p className="mt-2 text-muted-foreground">
+                      <p className="mt-2 text-sm md:text-base text-muted-foreground">
                         {item.description}
                       </p>
                     </MotionDiv>

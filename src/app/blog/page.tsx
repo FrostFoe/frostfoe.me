@@ -1,3 +1,4 @@
+
 import PostCard from "@/components/blog/PostCard";
 import { MotionDiv } from "@/components/blog/Motion";
 import { getAllPosts } from "@/lib/mdx";
@@ -44,10 +45,10 @@ export default async function BlogPage() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight">
+          <h1 className="mb-4 text-3xl md:text-4xl font-extrabold tracking-tight">
             From the Digital Frontier
           </h1>
-          <p className="mb-12 text-muted-foreground">
+          <p className="mb-12 text-muted-foreground text-base md:text-lg">
             A collection of my thoughts on design, tech, and everything in
             between.
           </p>
