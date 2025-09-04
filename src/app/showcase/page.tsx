@@ -7,8 +7,6 @@ import { MotionDiv, MotionLink } from "@/components/blog/Motion";
 import type { Metadata } from "next";
 import { ArrowUpRight, Rocket } from "lucide-react";
 
-
-
 const containerVariant = {
   hidden: { opacity: 0 },
   visible: {
@@ -112,7 +110,7 @@ export default function ShowcasePage() {
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="h-full overflow-hidden transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10">
+                <Card className="h-full overflow-hidden transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 border-border/70 hover:border-primary/50">
                   <MotionDiv
                     className="relative aspect-video w-full"
                     whileHover={{ z: 20 }}
@@ -123,7 +121,7 @@ export default function ShowcasePage() {
                       alt={item.title}
                       width={600}
                       height={400}
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                       data-ai-hint={item.hint}
                     />
                   </MotionDiv>
@@ -138,7 +136,7 @@ export default function ShowcasePage() {
                     >
                       <h3 className="flex items-center justify-between text-xl font-bold">
                         {item.title}
-                        <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
+                        <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
                       </h3>
                       <p className="mt-2 text-muted-foreground">
                         {item.description}

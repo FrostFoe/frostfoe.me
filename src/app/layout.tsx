@@ -6,13 +6,15 @@ import { siteConfig } from "@/content/config";
 import { Hind_Siliguri } from "next/font/google";
 import dynamic from "next/dynamic";
 import { Spotlight } from "@/components/ui/spotlight";
+import { NotFoundProvider } from "@/lib/not-found-context";
 
 const Footer = dynamic(() => import("@/components/blog/Footer"));
 
 const hindSiliguri = Hind_Siliguri({
-  subsets: ["bengali", "latin"],
+  subsets: ["latin", "bengali"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-hind-siliguri",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -58,19 +60,13 @@ export const metadata: Metadata = {
   },
 };
 
-import { NotFoundProvider } from "@/lib/not-found-context";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${hindSiliguri.variable} dark`}>
-      <head>
-        <link rel="preconnect" href="https://placehold.co" />
-        <link rel="preconnect" href="https://raw.githubusercontent.com" />
-      </head>
+    <html lang="en" className={`${hindSiliguri.variable} dark`} suppressHydrationWarning>
       <body className="font-body bg-background text-foreground antialiased">
         <Spotlight />
         <NotFoundProvider>

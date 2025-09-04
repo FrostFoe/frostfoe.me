@@ -4,18 +4,6 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-const MotionDiv = dynamic(
-  () => import("@/components/blog/Motion").then((mod) => mod.MotionDiv),
-  {
-    ssr: false,
-  },
-);
-const MotionLink = dynamic(
-  () => import("@/components/blog/Motion").then((mod) => mod.MotionLink),
-  {
-    ssr: false,
-  },
-);
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/content/config";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -27,6 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import dynamic from "next/dynamic";
+import { MotionDiv, MotionLink } from "@/components/blog/Motion";
 
 const SearchDialog = dynamic(() => import("./SearchDialog"), {
   loading: () => (
@@ -87,7 +76,7 @@ const Header = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <Button variant="ghost" size="icon">
+                  <Button variant="ghost" size="icon" aria-label="Search">
                     <Search className="h-5 w-5 text-muted-foreground" />
                     <span className="sr-only">Search</span>
                   </Button>
@@ -101,7 +90,7 @@ const Header = () => {
             <div className="md:hidden">
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
+                  <Button variant="ghost" size="icon" aria-label="Open menu">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
