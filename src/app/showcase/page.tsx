@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,48 +36,42 @@ const showcaseItems = [
   {
     title: "Project Alpha",
     description: "A cutting-edge web application for data visualization.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "abstract data visualization",
     url: "#",
   },
   {
     title: "Project Beta",
     description: "An e-commerce platform with a focus on user experience.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "modern online store",
     url: "#",
   },
   {
     title: "Project Gamma",
     description: "A mobile app designed for seamless social networking.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "social media app",
     url: "#",
   },
   {
     title: "Project Delta",
     description: "A corporate website with a clean and modern design.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "professional business website",
     url: "#",
   },
   {
     title: "Project Epsilon",
     description: "A portfolio website for a creative agency.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "creative agency portfolio",
     url: "#",
   },
   {
     title: "Project Zeta",
     description: "A blog platform with a focus on readability and speed.",
-    image:
-      "https://www.shutterstock.com/image-photo/human-brain-character-adorned-stylish-600nw-2317787017.jpg",
+    image: "https://picsum.photos/600/400",
     hint: "minimalist blog design",
     url: "#",
   },
@@ -95,8 +91,8 @@ export default function ShowcasePage() {
             My Showcase <Rocket className="h-10 w-10" />
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            A selection of projects that I&apos;m proud of. Each one represents a
-            unique challenge and a story of creative problem-solving.
+            A selection of projects that I&apos;m proud of. Each one represents
+            a unique challenge and a story of creative problem-solving.
           </p>
         </MotionDiv>
 
@@ -128,7 +124,8 @@ export default function ShowcasePage() {
                     <Image
                       src={item.image}
                       alt={item.title}
-                      fill
+                      width={600}
+                      height={400}
                       className="object-cover"
                       data-ai-hint={item.hint}
                     />
