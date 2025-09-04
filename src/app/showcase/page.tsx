@@ -7,10 +7,7 @@ import { MotionDiv, MotionLink } from "@/components/blog/Motion";
 import type { Metadata } from "next";
 import { ArrowUpRight, Rocket } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Showcase",
-  description: "A showcase of projects by FrostFoe.",
-};
+
 
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -36,42 +33,42 @@ const showcaseItems = [
   {
     title: "Project Alpha",
     description: "A cutting-edge web application for data visualization.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-1.jpg",
     hint: "abstract data visualization",
     url: "#",
   },
   {
     title: "Project Beta",
     description: "An e-commerce platform with a focus on user experience.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-2.jpg",
     hint: "modern online store",
     url: "#",
   },
   {
     title: "Project Gamma",
     description: "A mobile app designed for seamless social networking.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-3.jpg",
     hint: "social media app",
     url: "#",
   },
   {
     title: "Project Delta",
     description: "A corporate website with a clean and modern design.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-4.jpg",
     hint: "professional business website",
     url: "#",
   },
   {
     title: "Project Epsilon",
     description: "A portfolio website for a creative agency.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-5.jpg",
     hint: "creative agency portfolio",
     url: "#",
   },
   {
     title: "Project Zeta",
     description: "A blog platform with a focus on readability and speed.",
-    image: "https://picsum.photos/600/400",
+    image: "/images/downloaded/picsum-6.jpg",
     hint: "minimalist blog design",
     url: "#",
   },

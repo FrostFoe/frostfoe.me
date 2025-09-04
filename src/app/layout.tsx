@@ -3,15 +3,16 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/blog/Header";
 import { siteConfig } from "@/content/config";
-import { Space_Grotesk } from "next/font/google";
+import { Hind_Siliguri } from "next/font/google";
 import dynamic from "next/dynamic";
 import { Spotlight } from "@/components/ui/spotlight";
 
 const Footer = dynamic(() => import("@/components/blog/Footer"));
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-hind-siliguri",
 });
 
 export const metadata: Metadata = {
@@ -65,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} dark`}>
+    <html lang="en" className={`${hindSiliguri.variable} dark`}>
       <head>
         <link rel="preconnect" href="https://placehold.co" />
         <link rel="preconnect" href="https://raw.githubusercontent.com" />

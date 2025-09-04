@@ -84,14 +84,14 @@ const MOCK_COMMENTS: Comment[] = [
   {
     id: "1",
     author: "Jane Doe",
-    avatarUrl: "https://placehold.co/40x40.png",
+    avatarUrl: "/images/downloaded/placeholder.png",
     date: "2 days ago",
     text: "This was an amazing read! I learned so much about Framer Motion. The 3D effects are especially cool. Can't wait to try them out on my own projects.",
     reply: {
       id: "r1",
       author: "FrostFoe",
       avatarUrl:
-        "https://raw.githubusercontent.com/FrostFoe/localhost/refs/heads/main/images/logo.png",
+        "/images/downloaded/logo.png",
       date: "1 day ago",
       text: "Thanks, Jane! I'm so glad you found it helpful. Let me know if you have any questions when you start implementing them. Happy coding!",
     },
@@ -99,7 +99,7 @@ const MOCK_COMMENTS: Comment[] = [
   {
     id: "2",
     author: "John Smith",
-    avatarUrl: "https://placehold.co/40x40.png",
+    avatarUrl: "/images/downloaded/placeholder.png",
     date: "4 days ago",
     text: "Incredible insights into modern web development. The combination of Next.js and Tailwind is powerful, and your explanations are crystal clear.",
   },

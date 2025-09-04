@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ["var(--font-space-grotesk)", "sans-serif"],
+        body: ["var(--font-hind-siliguri)", "sans-serif"],
         code: ["monospace"],
       },
       colors: {
