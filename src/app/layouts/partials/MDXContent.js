@@ -11,14 +11,14 @@ const MDXContent = ({ content }) => {
   };
 
   return (
-    <>
+    <div className="prose max-w-none">
       {/* @ts-ignore */}
       <MDXRemote
         source={content}
         components={shortcodes}
         options={{ mdxOptions }}
       />
-    </>
+    </div>
   );
 };
 

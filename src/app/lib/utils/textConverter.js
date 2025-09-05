@@ -1,5 +1,4 @@
 import { slug } from "github-slugger";
-import { marked } from "marked";
 
 // slugify
 export const slugify = (content) => {
@@ -11,24 +10,9 @@ export const slugify = (content) => {
 // markdownify
 export const markdownify = (content, tag, className) => {
   if (!content) return null;
-
   const Tag = tag;
-  return tag ? (
-    <Tag
-      className={className}
-      dangerouslySetInnerHTML={{
-        __html:
-          tag === "div" ? marked.parse(content) : marked.parseInline(content),
-      }}
-    />
-  ) : (
-    <span
-      className={className}
-      dangerouslySetInnerHTML={{
-        __html: marked.parseInline(content),
-      }}
-    />
-  );
+
+  return <Tag className={className}>{content}</Tag>;
 };
 
 // humanize
@@ -47,28 +31,7 @@ export const humanize = (content) => {
 export const plainify = (content) => {
   if (!content) return null;
 
-  const mdParsed = marked.parseInline(String(content));
-  const filterBrackets = mdParsed.replace(/<\/?[^>]+(>|$)/gm, "");
-  const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
-  const stripHTML = htmlEntityDecoder(filterSpaces);
-  return stripHTML;
-};
-
-// strip entities for plainify
-const htmlEntityDecoder = (htmlWithEntities) => {
-  let entityList = {
-    "&nbsp;": " ",
-    "&lt;": "<",
-    "&gt;": ">",
-    "&amp;": "&",
-    "&quot;": '"',
-    "&#39;": "'",
-  };
-  let htmlWithoutEntities = htmlWithEntities.replace(
-    /(&amp;|&lt;|&gt;|&quot;|&#39;)/g,
-    (entity) => {
-      return entityList[entity];
-    }
-  );
-  return htmlWithoutEntities;
+  // A basic plainify to remove HTML-like tags.
+  // For more robust parsing, a library might be needed, but this handles simple cases.
+  return content.replace(/<\/?[^>]+(>|$)/g, "");
 };
