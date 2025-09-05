@@ -4,7 +4,6 @@ import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
-import { ThemeProvider } from "next-themes";
 import "../styles/style.scss";
 
 export default function RootLayout({ children }) {
@@ -55,11 +54,9 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <Providers>{children}</Providers>
-          <Footer />
-        </ThemeProvider>
+        <Header />
+        <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );
