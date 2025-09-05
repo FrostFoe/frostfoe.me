@@ -73,15 +73,12 @@ export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
     database_id: databaseId,
   });
 
+  console.log("Raw Notion response:", JSON.stringify(response.results, null, 2));
+
   const postsResults = response.results;
 
   const posts = await Promise.all(
     postsResults.map(async (result: any) => {
-      // Add a check for published status
-      if (!result.properties.Published.checkbox) {
-        return null;
-      }
-
       const postDetails = mapNotionResultToPost(result);
       const blocks = await getBlocks(result.id);
       const content = blocks
@@ -109,10 +106,12 @@ export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
     }),
   );
 
-  // Filter out null posts (unpublished)
-  const publishedPosts = posts.filter((post): post is Post => post !== null);
+  const publishedPosts = posts.filter(
+    (post): post is Post => post !== null && post.frontmatter.published,
+  );
 
-  // Sort posts by date in the application code
+  console.log("Mapped posts:", JSON.stringify(publishedPosts, null, 2));
+
   return publishedPosts.sort(
     (a, b) =>
       new Date(b.frontmatter.date).getTime() -
