@@ -7,8 +7,10 @@ import Providers from "@layouts/partials/Providers";
 import "../styles/style.scss";
 
 export default function RootLayout({ children }) {
-  const pf = theme.fonts.font_family.primary;
-  const sf = theme.fonts.font_family.secondary;
+  // import google font css
+  const pf = theme.fonts.font_family.primary.replace(/\s/g, "+");
+  const sf = theme.fonts.font_family.secondary?.replace(/\s/g, "+");
+
   return (
     <html suppressHydrationWarning={true} lang="en">
       <head>
