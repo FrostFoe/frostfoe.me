@@ -1,22 +1,22 @@
 ---
-title: "Why a balloon is a flexible bag that can be inflated with a gas"
-description: "meta description"
+title: "বেলুন কেন একটি নমনীয় ব্যাগ যা গ্যাস দিয়ে ফোলানো যায়"
+description: "মেটা বর্ণনা"
 image: "/images/posts/04.jpg"
 date: 2021-02-02
 draft: false
-authors: ["Mark Dinn"]
-tags: ["Balloon", "Gas"]
-categories: ["Accessories"]
+authors: ["মার্ক ডিন"]
+tags: ["বেলুন", "গ্যাস"]
+categories: ["অ্যাকসেসরিজ"]
 ---
 
-A balloon is a flexible bag that can be inflated with a gas, such as helium, hydrogen, nitrous oxide, oxygen, and air. For special tasks, balloons can be filled with smoke, liquid water, granular media, or light sources.
+একটি বেলুন হল একটি নমনীয় ব্যাগ যা হিলিয়াম, হাইড্রোজেন, নাইট্রাস অক্সাইড, অক্সিজেন এবং বায়ুর মতো গ্যাস দিয়ে ফোলানো যায়। বিশেষ কাজের জন্য, বেলুনগুলি ধোঁয়া, তরল জল, দানাদার মিডিয়া বা আলোর উৎস দিয়ে ভরা যেতে পারে।
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
 
-### Creative Design
+### সৃজনশীল ডিজাইন
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+নাম ইউটি রুট্রাম এক্স, ভেনেনাটিস সলিসিটিউডিন উরনা। আলকোয়াম ইরাট ভলুটপাট। ইন্টিজার ইউ ইপ্সাম সেম। ইউটি বিবেন্ডাম লাকাস ভেস্টিবুলাম ম্যাক্সিমাস সাসসিপিট। কুইসকু ভিটা নিভ আইয়াকুলিস নেক ব্লান্ডিট ইউইসমোড।
 
->Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+>লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
