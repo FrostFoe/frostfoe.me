@@ -10,13 +10,13 @@ const { blog_folder } = config.settings;
 const Category = ({ params }) => {
   const category = params.category;
   // SERVER SIDE RENDERING
-  const posts = getSinglePage(`content/${blog_folder}`);
+  const posts = getSinglePage(`src/content/${blog_folder}`);
   const filterPosts = posts.filter((post) =>
     post.frontmatter.categories.find((category) =>
       slugify(category).includes(params.category)
     )
   );
-  const authors = getSinglePage("content/authors");
+  const authors = getSinglePage("src/content/authors");
   //
   return (
     <>
@@ -38,7 +38,7 @@ export default Category;
 
 // category page routes
 export async function generateStaticParams() {
-  const allCategories = getTaxonomy(`content/${blog_folder}`, "categories");
+  const allCategories = getTaxonomy(`src/content/${blog_folder}`, "categories");
 
   const paths = allCategories.map((category) => ({
     category: category,

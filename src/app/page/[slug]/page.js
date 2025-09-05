@@ -9,8 +9,8 @@ const { blog_folder } = config.settings;
 const BlogPagination = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const posts = await getSinglePage(`content/${blog_folder}`);
-  const authors = await getSinglePage("content/authors");
+  const posts = await getSinglePage(`src/content/${blog_folder}`);
+  const authors = await getSinglePage("src/content/authors");
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
@@ -33,7 +33,7 @@ export default BlogPagination;
 
 // get blog pagination slug
 export async function generateStaticParams() {
-  const getAllSlug = await getSinglePage(`content/${blog_folder}`);
+  const getAllSlug = await getSinglePage(`src/content/${blog_folder}`);
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);

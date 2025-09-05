@@ -14,12 +14,12 @@ const RegularPages = async ({ params }) => {
   const { regular: slug } = params;
   const pageData = await getRegularPage(slug);
   // get posts folder slug for filtering
-  const getPostSlug = getSinglePage(`content/${blog_folder}`);
+  const getPostSlug = getSinglePage(`src/content/${blog_folder}`);
   const postSlug = getPostSlug.map((item) => item.slug);
   // author data
-  const authors = getSinglePage("content/authors");
+  const authors = getSinglePage("src/content/authors");
   // all single pages
-  const posts = getSinglePage(`content/${blog_folder}`);
+  const posts = getSinglePage(`src/content/${blog_folder}`);
   //...
 
   const { title, meta_title, description, image, noindex, canonical, layout } =
@@ -61,8 +61,8 @@ export default RegularPages;
 
 // for regular page routes
 export async function generateStaticParams() {
-  const regularSlugs = await getSinglePage("content");
-  const postSlugs = await getSinglePage(`content/${blog_folder}`);
+  const regularSlugs = await getSinglePage("src/content");
+  const postSlugs = await getSinglePage(`src/content/${blog_folder}`);
   const allSlugs = [...regularSlugs, ...postSlugs];
   const paths = allSlugs.map((item) => ({
     regular: item.slug,

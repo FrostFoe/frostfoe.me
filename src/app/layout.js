@@ -4,7 +4,7 @@ import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
-import "./styles/style.scss";
+import "../styles/style.scss";
 
 export default function RootLayout({ children }) {
   // const pf = theme.fonts.font_family.primary;

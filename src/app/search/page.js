@@ -3,7 +3,7 @@ import { getSinglePage } from "@lib/contentParser";
 import { Suspense } from "react";
 
 const SearchPage = async () => {
-  const authors = await getSinglePage("content/authors");
+  const authors = await getSinglePage("src/content/authors");
 
   return (
     <>

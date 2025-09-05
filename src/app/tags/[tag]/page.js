@@ -9,11 +9,11 @@ const { blog_folder } = config.settings;
 // tag page
 const Tag = ({ params }) => {
   const tag = params.tag;
-  const posts = getSinglePage(`content/${blog_folder}`);
+  const posts = getSinglePage(`src/content/${blog_folder}`);
   const filterPosts = posts.filter((post) =>
     post.frontmatter.tags.find((tag) => slugify(tag).includes(params.tag))
   );
-  const authors = getSinglePage("content/authors");
+  const authors = getSinglePage("src/content/authors");
 
   return (
     <>
@@ -34,7 +34,7 @@ export default Tag;
 
 // tag page routes
 export const generateStaticParams = () => {
-  const allCategories = getTaxonomy(`content/${blog_folder}`, "tags");
+  const allCategories = getTaxonomy(`src/content/${blog_folder}`, "tags");
 
   const paths = allCategories.map((tag) => ({
     tag: tag,

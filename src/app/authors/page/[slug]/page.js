@@ -10,8 +10,8 @@ const AuthorPagination = async ({ params }) => {
   //
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const authors = getSinglePage("content/authors");
-  const authorIndex = await getListPage("content/authors/_index.md");
+  const authors = getSinglePage("src/content/authors");
+  const authorIndex = await getListPage("src/content/authors/_index.md");
 
   //
   const indexOfLastAuthor = currentPage * pagination;
@@ -43,7 +43,7 @@ export default AuthorPagination;
 
 // get authors pagination slug
 export const generateStaticParams = () => {
-  const getAllSlug = getSinglePage("content/authors");
+  const getAllSlug = getSinglePage("src/content/authors");
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);

@@ -6,7 +6,7 @@ import Link from "next/link";
 const { blog_folder } = config.settings;
 
 const Categories = async () => {
-  const categories = await getTaxonomy(`content/${blog_folder}`, "categories");
+  const categories = await getTaxonomy(`src/content/${blog_folder}`, "categories");
   return (
     <>
       <SeoMeta title="Categories" />

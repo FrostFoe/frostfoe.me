@@ -6,7 +6,7 @@ import Link from "next/link";
 const { blog_folder } = config.settings;
 
 const Tags = async () => {
-  const tags = await getTaxonomy(`content/${blog_folder}`, "tags");
+  const tags = await getTaxonomy(`src/content/${blog_folder}`, "tags");
 
   return (
     <>
