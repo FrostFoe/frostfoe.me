@@ -54,12 +54,28 @@
 @layer components {
   /* section style */
   .section {
-    @apply py-16;
+    @apply py-8 md:py-16;
   }
 
   /* container */
   .container {
-    @apply max-w-[1000px];
+    @apply mx-auto max-w-6xl px-4;
+  }
+  
+  .row {
+    @apply -mx-4 flex flex-wrap;
+  }
+  
+  .col-12 {
+    @apply w-full px-4;
+  }
+  
+  .sm\:col-6 {
+    @apply sm:w-1/2;
+  }
+  
+  .md\:col-4 {
+    @apply md:w-1/3;
   }
 
   /* form style */
@@ -88,16 +104,16 @@
 
   /* social icon style */
   .social-icons {
-    @apply space-x-4;
+    @apply space-x-2 md:space-x-4;
   }
   .social-icons li {
     @apply inline-block;
   }
   .social-icons li a {
-    @apply block h-12 w-12 rounded-lg border border-light bg-transparent text-center text-white transition hover:border-primary hover:bg-primary;
+    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white transition hover:border-primary hover:bg-primary md:h-12 md:w-12;
   }
   .social-icons li a svg {
-    @apply m-auto h-12 text-lg;
+    @apply m-auto h-10 text-lg md:h-12;
   }
 
   .social-icons-simple {
@@ -126,7 +142,7 @@
   /* form style */
   .form-input,
   .form-textarea {
-    @apply rounded-lg border-border text-text focus:border-primary focus:ring-transparent;
+    @apply w-full rounded-lg border-border text-text focus:border-primary focus:ring-transparent;
   }
 
   /* content style */
@@ -186,7 +202,7 @@
 
   /* search style */
   .search-modal {
-    @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-white opacity-0 transition md:h-full;
+    @apply invisible absolute top-0 left-0 right-0 z-10 h-full bg-white opacity-0 transition;
   }
   .search-modal .form-input {
     @apply h-full w-full border-0 text-lg;
@@ -203,11 +219,11 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white;
+    @apply border-primary bg-primary text-white;
   }
 
   .btn-outline-primary {
-    @apply border-primary bg-transparent hover:bg-primary hover:text-white;
+    @apply border-primary bg-transparent text-dark hover:border-primary hover:bg-primary hover:text-white;
   }
 }
 
