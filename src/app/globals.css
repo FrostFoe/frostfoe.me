@@ -104,7 +104,7 @@
     @apply inline-block;
   }
   .social-icons li a {
-    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white transition hover:border-primary hover:bg-primary md:h-12 md:w-12;
+    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white transition-all duration-300 ease-in-out hover:border-primary hover:bg-primary md:h-12 md:w-12;
   }
   .social-icons li a svg {
     @apply m-auto h-10 text-lg md:h-12;
@@ -117,7 +117,7 @@
     @apply inline-block;
   }
   .social-icons-simple li a {
-    @apply block p-3 text-dark transition hover:text-primary;
+    @apply block p-3 text-dark transition-all duration-300 ease-in-out hover:text-primary hover:scale-110;
   }
   .social-icons-simple li a svg {
     @apply text-lg;
@@ -130,7 +130,7 @@
     @apply inline-block;
   }
   .social-share li a {
-    @apply block p-3 transition hover:text-primary;
+    @apply block p-3 transition-all duration-300 ease-in-out hover:text-primary hover:scale-110;
   }
 
   .form-input,
@@ -171,7 +171,7 @@
   }
 
   .nav-link {
-    @apply p-3 text-lg font-semibold text-dark transition hover:text-primary md:p-4;
+    @apply p-3 text-lg font-semibold text-dark transition-all duration-300 ease-in-out hover:text-primary;
   }
 
   .nav-dropdown {
@@ -179,7 +179,7 @@
   }
 
   .nav-dropdown-list {
-    @apply z-10 rounded-lg bg-white p-4 shadow transition;
+    @apply z-10 rounded-lg bg-white p-4 shadow transition-all duration-300 ease-in-out;
   }
 
   .nav-dropdown-item {
@@ -187,11 +187,11 @@
   }
 
   .nav-dropdown-link {
-    @apply min-w-[150px] py-1 text-lg font-semibold text-dark transition hover:text-primary;
+    @apply min-w-[150px] py-1 text-lg font-semibold text-dark transition-all duration-300 ease-in-out hover:text-primary;
   }
 
   .search-modal {
-    @apply invisible absolute top-0 left-0 right-0 z-10 h-full bg-white opacity-0 transition;
+    @apply invisible absolute top-0 left-0 right-0 z-10 h-full bg-white opacity-0 transition-all duration-300 ease-in-out;
   }
   .search-modal .form-input {
     @apply h-full w-full border-0 text-lg;
@@ -204,15 +204,52 @@
   }
 
   .btn {
-    @apply inline-block rounded-lg border px-5 py-2 font-semibold transition;
+    @apply inline-block rounded-lg border px-5 py-2 font-semibold transition-all duration-300 ease-in-out;
   }
 
   .btn-primary {
     @apply border-primary bg-primary text-white;
   }
+  .btn-primary:hover {
+    @apply bg-transparent text-dark border-primary;
+  }
 
   .btn-outline-primary {
     @apply border-primary bg-transparent text-dark hover:border-primary hover:bg-primary hover:text-white;
+  }
+
+  /* Preloader */
+  .preloader {
+    @apply fixed top-0 left-0 w-full h-full bg-white z-[9999] flex items-center justify-center;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+
+  .preloader.hidden {
+    @apply opacity-0 invisible;
+  }
+
+  .loader {
+    @apply w-12 h-12 rounded-full border-4 border-t-primary border-gray-200 animate-spin;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Page transition animations */
+  .page-transition {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 

@@ -5,6 +5,7 @@ import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
 import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
+import PageTransition from "./layouts/components/PageTransition";
 
 const hind_siliguri = Hind_Siliguri({
   subsets: ["latin"],
@@ -39,9 +40,13 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
-        <Header />
-        <Providers>{children}</Providers>
-        <Footer />
+        <Providers>
+          <Header />
+          <PageTransition>
+            <main>{children}</main>
+          </PageTransition>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
