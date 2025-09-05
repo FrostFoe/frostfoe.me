@@ -1,5 +1,4 @@
 import Share from "@components/Share";
-import JsonLD from "@layouts/components/JsonLD";
 import dateFormat from "@lib/utils/dateFormat";
 import similerItems from "@lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
@@ -16,7 +15,6 @@ const PostSingle = ({ post, posts, authors, slug }) => {
 
   return (
     <>
-      <JsonLD post={post} />
       <section className="section">
         <div className="container">
           <article className="text-center">

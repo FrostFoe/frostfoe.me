@@ -7,10 +7,8 @@ import Providers from "@layouts/partials/Providers";
 import "../styles/style.scss";
 
 export default function RootLayout({ children }) {
-  // import google font css
-  const pf = "Hind+Siliguri";
-  const sf = theme.fonts.font_family.secondary?.replace(/\s/g, "+");
-
+  const pf = theme.fonts.font_family.primary;
+  const sf = theme.fonts.font_family.secondary;
   return (
     <html suppressHydrationWarning={true} lang="en">
       <head>
@@ -32,7 +30,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${pf}:wght@400;600;700&${
+          href={`https://fonts.googleapis.com/css2?family=${pf}${
             sf ? "&family=" + sf : ""
           }&display=swap`}
           rel="stylesheet"
