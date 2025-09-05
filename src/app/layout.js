@@ -16,18 +16,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${hind_siliguri.variable}`}>
       <head>
-        {/* responsive meta */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
 
-        {/* favicon */}
         <link rel="shortcut icon" href={config.site.favicon} />
-        {/* theme meta */}
         <meta name="theme-name" content="andromeda-light-nextjs" />
 
-        {/* theme meta */}
         <meta name="theme-name" content="andromeda-light-nextjs" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta

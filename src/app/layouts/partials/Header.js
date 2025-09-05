@@ -8,10 +8,8 @@ import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 const Header = () => {
-  // distructuring the main menu from menu object
   const { main } = menu;
 
-  // states declaration
   const [navFixed, setNavFixed] = useState(false);
   const [searchModal, setSearchModal] = useState(false);
 
@@ -34,11 +32,9 @@ const Header = () => {
         }`}
       >
         <nav className="navbar container">
-          {/* logo */}
           <div className="order-0">
             <Logo />
           </div>
-          {/* navbar toggler */}
           <input id="nav-toggle" type="checkbox" className="hidden" />
           <label
             id="show-button"
@@ -63,7 +59,6 @@ const Header = () => {
               />
             </svg>
           </label>
-          {/* /navbar toggler */}
 
           <ul
             id="nav-menu"

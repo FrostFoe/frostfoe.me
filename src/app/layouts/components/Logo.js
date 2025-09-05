@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Logo = ({ src }) => {
-  // destructuring items from config object
   const { logo, logo_width, logo_height, logo_text, title } = config.site;
 
   return (

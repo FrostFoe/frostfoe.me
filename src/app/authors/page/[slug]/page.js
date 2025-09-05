@@ -5,15 +5,12 @@ import { getListPage, getSinglePage } from "@lib/contentParser";
 import { markdownify } from "@lib/utils/textConverter";
 import Authors from "@partials/Authors";
 
-// blog pagination
 const AuthorPagination = async ({ params }) => {
-  //
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const authors = getSinglePage("src/content/authors");
   const authorIndex = await getListPage("src/content/authors/_index.md");
 
-  //
   const indexOfLastAuthor = currentPage * pagination;
   const indexOfFirstAuthor = indexOfLastAuthor - pagination;
   const totalPages = Math.ceil(authors.length / pagination);
@@ -41,7 +38,6 @@ const AuthorPagination = async ({ params }) => {
 
 export default AuthorPagination;
 
-// get authors pagination slug
 export const generateStaticParams = () => {
   const getAllSlug = getSinglePage("src/content/authors");
   const allSlug = getAllSlug.map((item) => item.slug);

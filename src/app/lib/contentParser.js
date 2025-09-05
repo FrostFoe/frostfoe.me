@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import path from "path";
 import { sortByDate } from "./utils/sortFunctions";
 
-// get list page data, ex: _index.md
 export const getListPage = (filePath) => {
   const pageData = fs.readFileSync(path.join(filePath), "utf-8");
   const pageDataParsed = matter(pageData);
@@ -26,7 +25,6 @@ export const getListPage = (filePath) => {
   };
 };
 
-// get all single pages, ex: blog/post.md
 export const getSinglePage = (folder) => {
   const filesPath = fs.readdirSync(path.join(folder));
   const sanitizeFiles = filesPath.filter((file) => file.includes(".md"));
@@ -52,7 +50,6 @@ export const getSinglePage = (folder) => {
   return filterByDate;
 };
 
-// get a regular page data from many pages, ex: about.md
 export const getRegularPage = (slug) => {
   let frontmatter, content;
   const publishedPages = getSinglePage("src/content/posts");

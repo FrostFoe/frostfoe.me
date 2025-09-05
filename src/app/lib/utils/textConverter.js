@@ -1,4 +1,3 @@
-// slugify
 export const slugify = (content) => {
   if (!content) return null;
 
@@ -11,7 +10,6 @@ export const slugify = (content) => {
     .replace(/-+$/, "");
 };
 
-// markdownify
 export const markdownify = (content, tag, className) => {
   if (!content) return null;
   const Tag = tag;
@@ -19,7 +17,6 @@ export const markdownify = (content, tag, className) => {
   return <Tag className={className}>{content}</Tag>;
 };
 
-// humanize
 export const humanize = (content) => {
   if (!content) return null;
 
@@ -31,11 +28,8 @@ export const humanize = (content) => {
     });
 };
 
-// plainify
 export const plainify = (content) => {
   if (!content) return null;
 
-  // A basic plainify to remove HTML-like tags.
-  // For more robust parsing, a library might be needed, but this handles simple cases.
   return content.replace(/<\/?[^>]+(>|$)/g, "");
 };

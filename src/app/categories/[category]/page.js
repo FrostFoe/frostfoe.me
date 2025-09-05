@@ -6,10 +6,8 @@ import { slugify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
-// category page
 const Category = ({ params }) => {
   const category = params.category;
-  // SERVER SIDE RENDERING
   const posts = getSinglePage(`src/content/${blog_folder}`);
   const filterPosts = posts.filter((post) =>
     post.frontmatter.categories.find((category) =>
@@ -17,7 +15,6 @@ const Category = ({ params }) => {
     )
   );
   const authors = getSinglePage("src/content/authors");
-  //
   return (
     <>
       <SeoMeta title={category} />
@@ -36,7 +33,6 @@ const Category = ({ params }) => {
 
 export default Category;
 
-// category page routes
 export async function generateStaticParams() {
   const allCategories = getTaxonomy(`src/content/${blog_folder}`, "categories");
 

@@ -6,7 +6,6 @@ import { slugify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
-// tag page
 const Tag = ({ params }) => {
   const tag = params.tag;
   const posts = getSinglePage(`src/content/${blog_folder}`);
@@ -32,7 +31,6 @@ const Tag = ({ params }) => {
 
 export default Tag;
 
-// tag page routes
 export const generateStaticParams = () => {
   const allCategories = getTaxonomy(`src/content/${blog_folder}`, "tags");
 
