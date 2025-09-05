@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "@components/Logo";
+import ThemeSwitcher from "@components/ThemeSwitcher";
 import menu from "@config/menu.json";
 import SearchModal from "@layouts/partials/SearchModal";
 import Link from "next/link";
@@ -29,7 +30,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-white py-2 transition-all ${
+        className={`sticky top-0 z-50 bg-white py-2 transition-all dark:bg-gray-800 ${
           navFixed ? "shadow" : "pt-8 md:pt-16"
         }`}
       >
@@ -102,9 +103,10 @@ const Header = () => {
               </React.Fragment>
             ))}
           </ul>
-          <div className="order-1 ml-auto md:order-2 md:ml-0">
+          <div className="order-1 ml-auto flex items-center md:order-2 md:ml-0">
+            <ThemeSwitcher />
             <div
-              className="cursor-pointer p-2 text-xl text-dark hover:text-primary"
+              className="cursor-pointer p-2 text-xl text-dark hover:text-primary dark:text-white"
               onClick={() => {
                 setSearchModal(true);
               }}

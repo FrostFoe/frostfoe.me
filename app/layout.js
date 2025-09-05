@@ -4,11 +4,12 @@ import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
+import { ThemeProvider } from "next-themes";
 import "../styles/style.scss";
 
 export default function RootLayout({ children }) {
   // import google font css
-  const pf = theme.fonts.font_family.primary.replace(/\s/g, "+");
+  const pf = "Hind+Siliguri";
   const sf = theme.fonts.font_family.secondary?.replace(/\s/g, "+");
 
   return (
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${pf}${
+          href={`https://fonts.googleapis.com/css2?family=${pf}:wght@400;600;700&${
             sf ? "&family=" + sf : ""
           }&display=swap`}
           rel="stylesheet"
@@ -54,9 +55,11 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
-        <Header />
-        <Providers>{children}</Providers>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <Providers>{children}</Providers>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
