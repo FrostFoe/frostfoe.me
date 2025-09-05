@@ -1,3 +1,8 @@
+import type { ListBlockChildrenResponse } from "@notionhq/client/build/src/api-endpoints";
+
+export type NotionBlock =
+  ListBlockChildrenResponse["results"][number];
+
 export interface Reply {
   id: string;
   author: string;
@@ -32,4 +37,5 @@ export interface Post {
   slug: string;
   frontmatter: PostFrontmatter;
   content: string;
+  blocks: NotionBlock[];
 }

@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -23,17 +22,7 @@ import {
 } from "lucide-react";
 import type { ComponentType } from "react";
 import CommentsSection from "@/components/blog/CommentsSection";
-
-const MdxContent = dynamic(
-  () =>
-    import("@/components/blog/MdxContent").then(
-      (mod) => mod.MdxContent as ComponentType<{ content: string }>,
-    ),
-  {
-    ssr: false,
-    loading: () => <Skeleton className="h-64 w-full" />,
-  },
-);
+import NotionRenderer from "@/components/blog/NotionRenderer";
 
 const iconMap: Record<string, React.ElementType> = {
   Linkedin,
@@ -72,7 +61,7 @@ export default function BlogPostContent({
   post,
   comments,
 }: BlogPostContentProps) {
-  const { frontmatter, content, slug } = post;
+  const { frontmatter, slug, blocks } = post;
   const { blog: blogConfig } = siteConfig;
   const postUrl = `${siteConfig.url}/blog/${slug}`;
 
@@ -144,7 +133,7 @@ export default function BlogPostContent({
           />
         </MotionDiv>
 
-        <MdxContent content={content} />
+        <NotionRenderer blocks={blocks} />
 
         <Separator className="my-8" />
 

@@ -1,12 +1,16 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/content/config";
-import { getAllPosts, getCategories, getTags } from "@/lib/mdx";
+import {
+  getAllPostsFromNotion,
+  getCategoriesFromNotion,
+  getTagsFromNotion,
+} from "@/lib/notion";
 import { slugify } from "@/lib/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPosts();
-  const categories = await getCategories();
-  const tags = await getTags();
+  const posts = await getAllPostsFromNotion();
+  const categories = await getCategoriesFromNotion();
+  const tags = await getTagsFromNotion();
   const siteUrl = siteConfig.url;
 
   const postUrls = posts.map((post) => ({

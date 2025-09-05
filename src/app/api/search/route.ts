@@ -1,9 +1,9 @@
-import { getAllPosts } from "@/lib/mdx";
+import { getAllPostsFromNotion } from "@/lib/notion";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const posts = await getAllPosts();
+    const posts = await getAllPostsFromNotion();
     return NextResponse.json(posts);
   } catch (_error) {
     return NextResponse.json(

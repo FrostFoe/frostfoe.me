@@ -1,7 +1,6 @@
-
 import PostCard from "@/components/blog/PostCard";
 import { MotionDiv } from "@/components/blog/Motion";
-import { getAllPosts } from "@/lib/mdx";
+import { getAllPostsFromNotion } from "@/lib/notion";
 import { Suspense } from "react";
 import Sidebar from "@/components/blog/Sidebar";
 import { SidebarLoader } from "@/components/blog/SidebarLoader";
@@ -34,7 +33,7 @@ const postItemVariant = {
 };
 
 export default async function BlogPage() {
-  const posts = await getAllPosts();
+  const posts = await getAllPostsFromNotion();
 
   return (
     <div className="bg-background font-sans text-foreground">

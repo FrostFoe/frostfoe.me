@@ -32,7 +32,8 @@ export const getPostBySlug = cache(
         ...(data as Omit<PostFrontmatter, "readingTime">),
         readingTime: stats.text,
       },
-      content,
+      content: content,
+      blocks: [],
     };
   },
 );

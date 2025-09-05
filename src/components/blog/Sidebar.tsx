@@ -1,11 +1,15 @@
 import * as React from "react";
-import { getAllPosts, getCategories, getTags } from "@/lib/mdx";
+import {
+  getAllPostsFromNotion,
+  getCategoriesFromNotion,
+  getTagsFromNotion,
+} from "@/lib/notion";
 import SidebarUI from "./SidebarUI";
 
 const Sidebar = async () => {
-  const allPosts = await getAllPosts();
-  const categories = await getCategories();
-  const tags = await getTags();
+  const allPosts = await getAllPostsFromNotion();
+  const categories = await getCategoriesFromNotion();
+  const tags = await getTagsFromNotion();
   const popularPosts = allPosts.slice(0, 3);
 
   return (

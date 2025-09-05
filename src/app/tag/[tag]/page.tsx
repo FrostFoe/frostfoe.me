@@ -1,6 +1,6 @@
 import PostCard from "@/components/blog/PostCard";
 import { MotionDiv } from "@/components/blog/Motion";
-import { getPostsByTag, getTags } from "@/lib/mdx";
+import { getPostsByTagFromNotion, getTagsFromNotion } from "@/lib/notion";
 import { slugify } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -36,7 +36,7 @@ const itemVariant = {
 };
 
 export async function generateStaticParams() {
-  const tags = await getTags();
+  const tags = await getTagsFromNotion();
   return tags.map((tag) => ({
     tag: slugify(tag),
   }));
@@ -46,15 +46,15 @@ export async function generateMetadata({
   params,
 }: TagPageProps): Promise<Metadata> {
   const { tag } = params;
-  const allTags = await getTags();
+  const allTags = await getTagsFromNotion();
   const originalTag = allTags.find((t) => slugify(t) === tag);
 
   if (!originalTag) {
     return {};
   }
 
-  const title = `Posts tagged: &quot;${originalTag}&quot;`;
-  const description = `Explore all articles tagged with ${originalTag} on ${siteConfig.author.name}&apos;s blog.`;
+  const title = `Posts tagged: "${originalTag}"`;
+  const description = `Explore all articles tagged with ${originalTag} on ${siteConfig.author.name}'s blog.`;
 
   return {
     title,
@@ -76,8 +76,8 @@ export async function generateMetadata({
 
 export default async function TagPage({ params }: TagPageProps) {
   const { tag } = params;
-  const posts = await getPostsByTag(tag);
-  const allTags = await getTags();
+  const posts = await getPostsByTagFromNotion(tag);
+  const allTags = await getTagsFromNotion();
   const originalTag = allTags.find((t) => slugify(t) === tag);
 
   if (!posts.length || !originalTag) {
@@ -94,7 +94,7 @@ export default async function TagPage({ params }: TagPageProps) {
           viewport={{ once: true, amount: 0.5 }}
         >
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight">
-            Posts tagged: &quot;{originalTag}&quot;
+            Posts tagged: "{originalTag}"
           </h1>
           <p className="mb-12 text-muted-foreground">
             {posts.length} article{posts.length === 1 ? "" : "s"} found for this

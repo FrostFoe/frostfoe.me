@@ -1,6 +1,9 @@
 import PostCard from "@/components/blog/PostCard";
 import { MotionDiv } from "@/components/blog/Motion";
-import { getCategories, getPostsByCategory } from "@/lib/mdx";
+import {
+  getCategoriesFromNotion,
+  getPostsByCategoryFromNotion,
+} from "@/lib/notion";
 import { slugify } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -36,7 +39,7 @@ const itemVariant = {
 };
 
 export async function generateStaticParams() {
-  const categories = await getCategories();
+  const categories = await getCategoriesFromNotion();
   return Object.keys(categories).map((category) => ({
     category: slugify(category),
   }));
@@ -46,7 +49,7 @@ export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
   const { category } = params;
-  const allCategories = await getCategories();
+  const allCategories = await getCategoriesFromNotion();
   const originalCategory = Object.keys(allCategories).find(
     (c) => slugify(c) === category,
   );
@@ -55,8 +58,8 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `Posts in category: &quot;${originalCategory}&quot;`;
-  const description = `Browse all articles filed under the category ${originalCategory} on ${siteConfig.author.name}&apos;s blog.`;
+  const title = `Posts in category: "${originalCategory}"`;
+  const description = `Browse all articles filed under the category ${originalCategory} on ${siteConfig.author.name}'s blog.`;
 
   return {
     title,
@@ -78,8 +81,8 @@ export async function generateMetadata({
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = params;
-  const posts = await getPostsByCategory(category);
-  const allCategories = await getCategories();
+  const posts = await getPostsByCategoryFromNotion(category);
+  const allCategories = await getCategoriesFromNotion();
   const originalCategory = Object.keys(allCategories).find(
     (c) => slugify(c) === category,
   );
@@ -98,7 +101,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           viewport={{ once: true, amount: 0.5 }}
         >
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight">
-            Posts in category: &quot;{originalCategory}&quot;
+            Posts in category: "{originalCategory}"
           </h1>
           <p className="mb-12 text-muted-foreground">
             {posts.length} article{posts.length === 1 ? "" : "s"} found in this

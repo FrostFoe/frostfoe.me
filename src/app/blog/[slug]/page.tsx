@@ -1,7 +1,9 @@
-
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/mdx";
+import {
+  getAllPostsFromNotion,
+  getPostFromSlug,
+} from "@/lib/notion";
 import { siteConfig } from "@/content/config";
 import type { Metadata } from "next";
 import Sidebar from "@/components/blog/Sidebar";
@@ -10,7 +12,7 @@ import BlogPostContent from "./BlogPostContent";
 import { MOCK_COMMENTS } from "@/content/mock-comments";
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts();
+  const posts = await getAllPostsFromNotion();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
@@ -19,7 +21,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+  const post = await getPostFromSlug(params.slug);
   if (!post) {
     return {};
   }
@@ -67,7 +69,7 @@ export default async function BlogPostPage({
 }: {
   params: { slug: string };
 }) {
-  const post = await getPostBySlug(params.slug);
+  const post = await getPostFromSlug(params.slug);
 
   if (!post) {
     notFound();
