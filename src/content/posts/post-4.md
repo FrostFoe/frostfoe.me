@@ -1,22 +1,22 @@
 ---
-title: "বেলুন কেন একটি নমনীয় ব্যাগ যা গ্যাস দিয়ে ফোলানো যায়"
-description: "মেটা বর্ণনা"
+title: "Deploying a Next.js App with Vercel"
+description: "A step-by-step guide to seamless deployments."
 image: "/images/posts/04.jpg"
 date: 2021-02-02
 draft: false
-authors: ["মার্ক ডিন"]
-tags: ["বেলুন", "গ্যাস"]
-categories: ["অ্যাকসেসরিজ"]
+authors: ["Mark Dinn"]
+tags: ["next.js", "deployment"]
+categories: ["DevOps"]
 ---
 
-একটি বেলুন হল একটি নমনীয় ব্যাগ যা হিলিয়াম, হাইড্রোজেন, নাইট্রাস অক্সাইড, অক্সিজেন এবং বায়ুর মতো গ্যাস দিয়ে ফোলানো যায়। বিশেষ কাজের জন্য, বেলুনগুলি ধোঁয়া, তরল জল, দানাদার মিডিয়া বা আলোর উৎস দিয়ে ভরা যেতে পারে।
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
 
-লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
+Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
 
-### সৃজনশীল ডিজাইন
+### Creative Design
 
-নাম ইউটি রুট্রাম এক্স, ভেনেনাটিস সলিসিটিউডিন উরনা। আলকোয়াম ইরাট ভলুটপাট। ইন্টিজার ইউ ইপ্সাম সেম। ইউটি বিবেন্ডাম লাকাস ভেস্টিবুলাম ম্যাক্সিমাস সাসসিপিট। কুইসকু ভিটা নিভ আইয়াকুলিস নেক ব্লান্ডিট ইউইসমোড।
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
 
->লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
+>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
 
-লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!

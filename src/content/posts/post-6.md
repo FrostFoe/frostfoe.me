@@ -1,22 +1,22 @@
 ---
-title: "এই অ্যালার্ম ঘড়ির সাহায্যে একজন সকালের মানুষ হয়ে উঠুন"
-description: "মেটা বর্ণনা"
+title: "Getting Started with Tailwind CSS"
+description: "How to set up and use the world's most popular utility-first CSS framework."
 image: "/images/posts/06.jpg"
 date: 2021-02-03
 draft: false
-authors: ["মার্ক ডিন"]
-tags: ["অ্যালার্ম", "ঘড়ি"]
-categories: ["লাইফস্টাইল"]
+authors: ["Mark Dinn"]
+tags: ["css", "tailwind"]
+categories: ["Styling"]
 ---
 
-গত নয় মাস বা তারও বেশি সময় ধরে প্রায় প্রতিদিনই ১৩ই মার্চের মতো মনে হয়েছে, এবং এটি কখনও কখনও আপনার সামনের দিনের জন্য ঘুম থেকে উঠতে চাওয়া কঠিন করে তুলতে পারে।
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
 
-আপনাকে একজন সকালের মানুষ করে তুলতে, ওয়েক-আপ লাইট সূর্যোদয়ের অনুকরণ করে আপনাকে ধীরে ধীরে জাগিয়ে তোলে। এটি আপনাকে ডিফল্ট আইফোন অ্যালার্ম সাউন্ড দ্বারা ঝাঁকুনি দিয়ে জাগানোর পরিবর্তে আরও স্বাভাবিকভাবে ঘুম থেকে উঠতে দেয়, যা সত্যি বলতে আমার ফাইট বা ফ্লাইট প্রতিক্রিয়াকে ট্রিগার করে।
+Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
 
-### সৃজনশীল ডিজাইন
+### Creative Design
 
-নাম ইউটি রুট্রাম এক্স, ভেনেনাটিস সলিসিটিউডিন উরনা। আলকোয়াম ইরাট ভলুটপাট। ইন্টিজার ইউ ইপ্সাম সেম। ইউটি বিবেন্ডাম লাকাস ভেস্টিবুলাম ম্যাক্সিমাস সাসসিপিট। কুইসকু ভিটা নিভ আইয়াকুলিস নেক ব্লান্ডিট ইউইসমোড।
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
 
->লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
+>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
 
-লরেম ইপ্সাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাque এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসেকয়াটার কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!

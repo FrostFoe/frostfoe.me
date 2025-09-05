@@ -1,5 +1,5 @@
 ---
-title: "I’m John Doe, A content writer based in LDN, currently at Bookworm"
+title: "About FrostFoe"
 meta_title: "About"
 image: "/images/author.jpg"
 layout: "about"
@@ -12,6 +12,6 @@ social:
   instagram: "https://www.instagram.com"
 ---
 
-A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget.
+I'm FrostFoe, a full-stack developer and content creator with a passion for building elegant digital experiences. With over a decade of experience in the industry, I specialize in modern web technologies, brand identity, and creating high-performance applications.
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+This blog serves as my digital forge, where I share insights on code, design, and technology. My goal is to craft tools and write articles that help other developers on their journey.

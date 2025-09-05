@@ -1,11 +1,11 @@
 ---
 title: John Doe
 image: /images/authors/john-doe.jpg
-description: this is meta description
+description: "A seasoned developer and guest author on FrostForge."
 social:
   facebook: https://www.facebook.com/
   twitter: https://www.twitter.com/
   instagram: https://www.instagram.com/
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+John Doe is a seasoned developer with a focus on front-end technologies. He contributes his expertise on modern JavaScript frameworks and performance optimization to the FrostForge blog.
