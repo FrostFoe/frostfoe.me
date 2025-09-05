@@ -8,7 +8,7 @@ import "./globals.css";
 import PageTransition from "./layouts/components/PageTransition";
 
 const hind_siliguri = Hind_Siliguri({
-  subsets: ["latin"],
+  subsets: ["bengali", "latin"],
   weight: ["400", "600", "700"],
   variable: "--font-hind-siliguri",
 });

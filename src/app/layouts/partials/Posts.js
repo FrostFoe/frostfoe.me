@@ -11,7 +11,7 @@ const Posts = ({ posts, className, authors }) => {
       {posts.map((post, i) => (
         <div
           key={`key-${i}`}
-          className={i === 0 ? "col-12" : "col-12 sm:col-6"}
+          className={`post-card ${i === 0 ? "col-12" : "col-12 sm:col-6"}`}
         >
           {post.frontmatter.image && (
             <Image
