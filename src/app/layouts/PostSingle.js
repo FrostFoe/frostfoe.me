@@ -2,10 +2,14 @@ import Share from "@components/Share";
 import dateFormat from "@lib/utils/dateFormat";
 import similerItems from "@lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
-import SimilarPosts from "@partials/SimilarPosts";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import MDXContent from "./partials/MDXContent";
+
+const SimilarPosts = dynamic(() => import("@partials/SimilarPosts"), {
+  ssr: false,
+});
 
 const PostSingle = ({ post, posts, authors, slug }) => {
   const { frontmatter, content } = post;
@@ -69,6 +73,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                 width={1000}
                 alt={title}
                 className="rounded-lg"
+                priority={true}
               />
             )}
             <div className="content mb-16 text-left">
@@ -97,7 +102,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
           </article>
         </div>
       </section>
-      {similarPosts && similarPosts.length > 0 && (
+      {similarPosts.length > 0 && (
         <section className="section">
           <div className="container">
             <h2 className="mb-8 text-center">Similar Posts</h2>

@@ -25,7 +25,8 @@ const Posts = ({ posts, className, authors }) => {
           )}
           <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
             <li>
-              {authors && post.frontmatter.authors &&
+              {authors &&
+                post.frontmatter.authors &&
                 authors
                   .filter((author) =>
                     post.frontmatter.authors
@@ -52,7 +53,7 @@ const Posts = ({ posts, className, authors }) => {
                   ))}
             </li>
             {post.frontmatter.date && (
-               <li>{dateFormat(post.frontmatter.date)}</li>
+              <li>{dateFormat(post.frontmatter.date)}</li>
             )}
             <li>
               <ul>

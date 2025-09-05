@@ -1,16 +1,20 @@
 import config from "@config/config.json";
-import theme from "@config/theme.json";
 import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
+import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 
+const hind_siliguri = Hind_Siliguri({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-hind-siliguri",
+});
+
 export default function RootLayout({ children }) {
-  // const pf = theme.fonts.font_family.primary;
-  // const sf = theme.fonts.font_family.secondary;
   return (
-    <html suppressHydrationWarning={true} lang="en">
+    <html lang="en" className={`${hind_siliguri.variable}`}>
       <head>
         {/* responsive meta */}
         <meta
@@ -22,17 +26,6 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href={config.site.favicon} />
         {/* theme meta */}
         <meta name="theme-name" content="andromeda-light-nextjs" />
-
-        {/* google font css */}
-        <link
-          rel="preconnect"
-          href="httpshttps://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
 
         {/* theme meta */}
         <meta name="theme-name" content="andromeda-light-nextjs" />
