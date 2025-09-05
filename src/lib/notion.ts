@@ -11,10 +11,6 @@ const notion = new Client({
 
 const databaseId = process.env.BLOG_INDEX_ID ?? "";
 
-const getPage = cache((pageId: string) => {
-  return notion.pages.retrieve({ page_id: pageId });
-});
-
 const getPageFromSlug = cache(async (slug: string) => {
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -56,17 +52,15 @@ function mapNotionResultToPost(result: any): Omit<Post, "content" | "blocks"> {
       title: result.properties.Page?.title[0]?.plain_text ?? "Untitled Post",
       date: result.properties.Date?.date?.start ?? new Date().toISOString(),
       description:
-        result.properties.Description?.rich_text[0]?.plain_text ?? "",
+        result.properties.Description?.rich_text[0]?.plain_text ??
+        "No description provided.",
       imageUrl:
-        result.properties.ImageUrl?.url ??
-        "https://picsum.photos/1200/630",
+        result.properties.ImageUrl?.url ?? "https://picsum.photos/1200/630",
       imageHint: "notion blog image",
       category: result.properties.Category?.select?.name ?? "General",
-      author:
-        result.properties.Authors?.people[0]?.name ?? "Anonymous",
+      author: result.properties.Authors?.people[0]?.name ?? "Anonymous",
       tags:
-        result.properties.Tags?.multi_select.map((tag: any) => tag.name) ??
-        [],
+        result.properties.Tags?.multi_select.map((tag: any) => tag.name) ?? [],
       readingTime: readingTimeStats.text,
       comments: true,
       published: result.properties.Published?.checkbox ?? false,
