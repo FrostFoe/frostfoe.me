@@ -1,23 +1,18 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { AnimatePresence, motion } from 'framer-motion';
+import { Suspense } from 'react';
+import Preloader from './Preloader';
 
 const PageTransition = ({ children }) => {
   const pathname = usePathname();
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
-      >
+    <Suspense fallback={<Preloader />}>
+      <div key={pathname} className="page-transition">
         {children}
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </Suspense>
   );
 };
 
