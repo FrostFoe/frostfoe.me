@@ -63,6 +63,7 @@ function mapNotionResultToPost(result: any): Omit<Post, "content" | "blocks"> {
       tags: result.properties.Tags.multi_select.map((tag: any) => tag.name),
       readingTime: readingTimeStats.text,
       comments: true,
+      published: result.properties.Published.checkbox,
     },
   };
 }
@@ -70,22 +71,17 @@ function mapNotionResultToPost(result: any): Omit<Post, "content" | "blocks"> {
 export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
   const response = await notion.databases.query({
     database_id: databaseId,
-    filter: {
-      property: "Published",
-      checkbox: {
-        equals: true,
-      },
-    },
-    sorts: [
-      {
-        property: "Date",
-        direction: "descending",
-      },
-    ],
   });
 
+  const postsResults = response.results;
+
   const posts = await Promise.all(
-    response.results.map(async (result) => {
+    postsResults.map(async (result: any) => {
+      // Add a check for published status
+      if (!result.properties.Published.checkbox) {
+        return null;
+      }
+
       const postDetails = mapNotionResultToPost(result);
       const blocks = await getBlocks(result.id);
       const content = blocks
@@ -113,7 +109,15 @@ export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
     }),
   );
 
-  return posts;
+  // Filter out null posts (unpublished)
+  const publishedPosts = posts.filter((post): post is Post => post !== null);
+
+  // Sort posts by date in the application code
+  return publishedPosts.sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).getTime() -
+      new Date(a.frontmatter.date).getTime(),
+  );
 });
 
 export const getPostFromSlug = cache(async (slug: string) => {

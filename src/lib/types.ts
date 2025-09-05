@@ -31,6 +31,7 @@ export interface PostFrontmatter {
   tags: string[];
   readingTime: string;
   comments?: boolean;
+  published?: boolean;
 }
 
 export interface Post {
