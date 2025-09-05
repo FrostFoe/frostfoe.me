@@ -4,7 +4,7 @@ import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
-import "../styles/style.scss";
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   // const pf = theme.fonts.font_family.primary;
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         {/* google font css */}
         <link
           rel="preconnect"
-          href="https://fonts.gstatic.com"
+          href="httpshttps://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
         <link
