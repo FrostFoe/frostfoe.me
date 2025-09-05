@@ -51,19 +51,25 @@ function mapNotionResultToPost(result: any): Omit<Post, "content" | "blocks"> {
   const readingTimeStats = readingTime("");
 
   return {
-    slug: result.properties.Slug.formula.string,
+    slug: result.properties.Slug?.formula?.string ?? "",
     frontmatter: {
-      title: result.properties.Title.title[0].plain_text,
-      date: result.properties.Date.date.start,
-      description: result.properties.Description.rich_text[0].plain_text,
-      imageUrl: result.properties.ImageUrl.url,
+      title: result.properties.Page?.title[0]?.plain_text ?? "Untitled Post",
+      date: result.properties.Date?.date?.start ?? new Date().toISOString(),
+      description:
+        result.properties.Description?.rich_text[0]?.plain_text ?? "",
+      imageUrl:
+        result.properties.ImageUrl?.url ??
+        "https://picsum.photos/1200/630",
       imageHint: "notion blog image",
-      category: result.properties.Category.select.name,
-      author: result.properties.Author.rich_text[0].plain_text,
-      tags: result.properties.Tags.multi_select.map((tag: any) => tag.name),
+      category: result.properties.Category?.select?.name ?? "General",
+      author:
+        result.properties.Authors?.people[0]?.name ?? "Anonymous",
+      tags:
+        result.properties.Tags?.multi_select.map((tag: any) => tag.name) ??
+        [],
       readingTime: readingTimeStats.text,
       comments: true,
-      published: result.properties.Published.checkbox,
+      published: result.properties.Published?.checkbox ?? false,
     },
   };
 }
@@ -72,8 +78,6 @@ export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
   const response = await notion.databases.query({
     database_id: databaseId,
   });
-
-  console.log("Raw Notion response:", JSON.stringify(response.results, null, 2));
 
   const postsResults = response.results;
 
@@ -109,8 +113,6 @@ export const getAllPostsFromNotion = cache(async (): Promise<Post[]> => {
   const publishedPosts = posts.filter(
     (post): post is Post => post !== null && post.frontmatter.published,
   );
-
-  console.log("Mapped posts:", JSON.stringify(publishedPosts, null, 2));
 
   return publishedPosts.sort(
     (a, b) =>
