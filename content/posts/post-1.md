@@ -2,7 +2,7 @@
 title: "পুরানো ওলারপেপার থেকে খেলনা তৈরির উপায়"
 description: "মেটা বর্ণনা"
 date: 2023-04-04
-image: "/images/posts/01.jpg"
+image: "/images/posts/01.webp"
 categories: ["art"]
 authors: ["Mark Dinn"]
 tags: ["diy", "toy"]

@@ -2,7 +2,7 @@
 title: "ফটোগ্রাফি সম্পর্কে আপনার যা জানা দরকার"
 description: "মেটা বর্ণনা"
 date: 2022-06-02
-image: "/images/posts/03.jpg"
+image: "/images/posts/03.webp"
 categories: ["art"]
 authors: ["Mark Dinn"]
 tags: ["diy", "toy"]

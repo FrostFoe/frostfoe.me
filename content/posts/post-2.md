@@ -2,7 +2,7 @@
 title: "কেন বেলুন একটি নমনীয় ব্যাগ"
 description: "মেটা বর্ণনা"
 date: 2022-04-10
-image: "/images/posts/02.jpg"
+image: "/images/posts/02.webp"
 categories: ["development"]
 authors: ["John Doe"]
 tags: ["diy", "toy"]
