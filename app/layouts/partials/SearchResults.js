@@ -1,7 +1,7 @@
 "use client";
 
 import { slugify } from "@lib/utils/textConverter";
-import { useSearchContext } from "context/state";
+import { useSearchContext } from "../../context/state";
 import { useSearchParams } from "next/navigation";
 import Posts from "./Posts";
 import SeoMeta from "./SeoMeta";

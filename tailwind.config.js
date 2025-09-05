@@ -24,7 +24,6 @@ if (theme.fonts.font_family.secondary) {
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./layouts/**/*.{js,ts,jsx,tsx}",
     "./content/**/*.{md,mdx}",
   ],
   theme: {

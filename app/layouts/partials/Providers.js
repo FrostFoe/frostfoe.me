@@ -1,6 +1,6 @@
 "use client";
 import config from "@config/config.json";
-import { JsonContext } from "context/state";
+import { JsonContext } from "../../context/state";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";

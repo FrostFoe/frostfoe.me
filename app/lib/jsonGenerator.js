@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
-const config = require("../config/config.json");
+const config = require("../../config/config.json");
 const { blog_folder } = config.settings;
 
 // get post data
@@ -25,7 +25,7 @@ const posts = filterPosts.map((filename) => {
 
 // write json file. Must need a ./json folder before writing
 try {
-  fs.writeFileSync(`json/posts.json`, JSON.stringify(posts));
+  fs.writeFileSync(`../json/posts.json`, JSON.stringify(posts));
 } catch (err) {
   console.error(err);
 }
