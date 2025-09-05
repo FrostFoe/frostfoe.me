@@ -1,3 +1,4 @@
+
 import Pagination from "@components/Pagination";
 import config from "@config/config.json";
 import SeoMeta from "@layouts/partials/SeoMeta";
@@ -6,11 +7,11 @@ import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
 // blog pagination
-const BlogPagination = async ({ params }) => {
+const BlogPagination = ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const posts = await getSinglePage(`src/content/${blog_folder}`);
-  const authors = await getSinglePage("src/content/authors");
+  const posts = getSinglePage(`src/content/${blog_folder}`);
+  const authors = getSinglePage("src/content/authors");
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
@@ -33,7 +34,7 @@ export default BlogPagination;
 
 // get blog pagination slug
 export async function generateStaticParams() {
-  const getAllSlug = await getSinglePage(`src/content/${blog_folder}`);
+  const getAllSlug = getSinglePage(`src/content/${blog_folder}`);
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);

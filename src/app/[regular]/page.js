@@ -1,3 +1,4 @@
+
 import config from "@config/config.json";
 import NotFound from "@layouts/404";
 import About from "@layouts/About";
@@ -61,8 +62,8 @@ export default RegularPages;
 
 // for regular page routes
 export async function generateStaticParams() {
-  const regularSlugs = await getSinglePage("src/content");
-  const postSlugs = await getSinglePage(`src/content/${blog_folder}`);
+  const regularSlugs = getSinglePage("src/content");
+  const postSlugs = getSinglePage(`src/content/${blog_folder}`);
   const allSlugs = [...regularSlugs, ...postSlugs];
   const paths = allSlugs.map((item) => ({
     regular: item.slug,
