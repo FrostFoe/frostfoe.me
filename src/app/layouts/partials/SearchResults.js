@@ -1,16 +1,20 @@
 "use client";
 
 import { slugify } from "@lib/utils/textConverter";
-import { useSearchContext } from "../../context/state";
 import { useSearchParams } from "next/navigation";
 import Posts from "./Posts";
 import SeoMeta from "./SeoMeta";
+import { getSinglePage } from "@lib/contentParser";
+import config from "@config/config.json";
+
+const { blog_folder } = config.settings;
 
 const SearchResults = ({ authors }) => {
   const searchParams = useSearchParams();
   const key = searchParams.get("key");
   const keyword = slugify(key || "");
-  const { posts } = useSearchContext();
+
+  const posts = getSinglePage(`src/content/${blog_folder}`);
 
   const searchResults = posts.filter((product) => {
     if (product.frontmatter.draft) {
@@ -32,6 +36,7 @@ const SearchResults = ({ authors }) => {
       return product;
     }
   });
+
   return (
     <>
       <SeoMeta title={`Search results for ${key}`} />

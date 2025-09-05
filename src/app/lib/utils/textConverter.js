@@ -1,10 +1,14 @@
-import { slug } from "github-slugger";
-
 // slugify
 export const slugify = (content) => {
   if (!content) return null;
 
-  return slug(content);
+  return content
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
 };
 
 // markdownify
