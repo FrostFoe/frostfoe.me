@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "FrostForge | A Developer's Blog by FrostFoe",
+    "title": "ফ্রস্টফোর্জ | ফ্রস্টফো-এর একটি ডেভেলপার ব্লগ",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "FrostFoe"
+    "logo_text": "ফ্রস্টফো"
   },
 
   "settings": {
@@ -18,12 +18,12 @@
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "copyright": "© 2024 FrostFoe. All Rights Reserved."
+    "copyright": "© ২০২৪ ফ্রস্টফো। সর্বস্বত্ব সংরক্ষিত।"
   },
 
   "metadata": {
-    "meta_author": "FrostFoe",
+    "meta_author": "ফ্রস্টফো",
     "meta_image": "/images/og-image.png",
-    "meta_description": "A Next.js and Tailwind CSS blog template by FrostFoe."
+    "meta_description": "ফ্রস্টফো দ্বারা নির্মিত একটি Next.js এবং Tailwind CSS ব্লগ টেমপ্লেট।"
   }
 }

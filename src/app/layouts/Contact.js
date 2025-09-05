@@ -17,7 +17,7 @@ const Contact = ({ data }) => {
         >
           <div className="mb-6">
             <label className="mb-2 block" htmlFor="name">
-              Name
+              নাম
             </label>
             <input
               className="form-input w-full"
@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
           </div>
           <div className="mb-6">
             <label className="mb-2 block" htmlFor="email">
-              Email
+              ইমেইল
             </label>
             <input
               className="form-input w-full"
@@ -39,7 +39,7 @@ const Contact = ({ data }) => {
           </div>
           <div className="mb-6">
             <label className="mb-2 block" htmlFor="subject">
-              Subject
+              বিষয়
             </label>
             <input
               className="form-input w-full"
@@ -50,11 +50,11 @@ const Contact = ({ data }) => {
           </div>
           <div className="mb-6">
             <label className="mb-2 block" htmlFor="message">
-              Message
+              বার্তা
             </label>
             <textarea className="form-textarea w-full" rows="7" />
           </div>
-          <button className="btn btn-outline-primary">Submit Now</button>
+          <button className="btn btn-outline-primary">এখনই জমা দিন</button>
         </form>
       </div>
     </section>

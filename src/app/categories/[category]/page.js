@@ -21,8 +21,8 @@ const Category = ({ params }) => {
       <div className="section">
         <div className="container">
           <h1 className="h2 mb-8 text-center">
-            Showing posts from <span className="text-primary">{category}</span>{" "}
-            category
+            <span className="text-primary">{category}</span>{" "}
+            বিভাগের পোস্টগুলো দেখানো হচ্ছে
           </h1>
           <Posts posts={filterPosts} authors={authors} />
         </div>

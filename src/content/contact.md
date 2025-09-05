@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: "যোগাযোগ"
 layout: "contact"
 draft: false
 ---

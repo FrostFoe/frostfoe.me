@@ -1,17 +1,15 @@
 ---
-title: "About FrostFoe"
-meta_title: "About"
+title: "ফ্রস্টফো সম্পর্কে"
+meta_title: "আমাদের সম্পর্কে"
 image: "/images/author.jpg"
 layout: "about"
 draft: false
-
-# social sites
 social:
   facebook: "https://www.facebook.com"
   twitter: "https://www.twitter.com"
   instagram: "https://www.instagram.com"
 ---
 
-I'm FrostFoe, a full-stack developer and content creator with a passion for building elegant digital experiences. With over a decade of experience in the industry, I specialize in modern web technologies, brand identity, and creating high-performance applications.
+আমি ফ্রস্টফো, একজন ফুল-স্ট্যাক ডেভেলপার এবং কন্টেন্ট ক্রিয়েটর। আমার ডিজিটাল অভিজ্ঞতা তৈরির প্রতি গভীর অনুরাগ রয়েছে। ইন্ডাস্ট্রিতে এক দশকেরও বেশি অভিজ্ঞতার সাথে, আমি আধুনিক ওয়েব প্রযুক্তি, ব্র্যান্ড আইডেন্টিটি এবং উচ্চ-পারফরম্যান্স অ্যাপ্লিকেশন তৈরিতে বিশেষজ্ঞ।
 
-This blog serves as my digital forge, where I share insights on code, design, and technology. My goal is to craft tools and write articles that help other developers on their journey.
+এই ব্লগটি আমার ডিজিটাল কারখানা, যেখানে আমি কোড, ডিজাইন এবং প্রযুক্তি সম্পর্কে আমার জ্ঞান শেয়ার করি। আমার লক্ষ্য হলো এমন সরঞ্জাম তৈরি করা এবং প্রবন্ধ লেখা যা অন্য ডেভেলপারদের তাদের যাত্রায় সহায়তা করবে।

@@ -20,7 +20,7 @@ const Tag = ({ params }) => {
       <div className="section">
         <div className="container">
           <h1 className="h2 mb-8 text-center">
-            Showing posts from <span className="text-primary">{tag}</span> tag
+            <span className="text-primary">{tag}</span> ট্যাগ থেকে পোস্টগুলো দেখানো হচ্ছে
           </h1>
           <Posts posts={filterPosts} authors={authors} />
         </div>

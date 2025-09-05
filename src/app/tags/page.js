@@ -10,10 +10,10 @@ const Tags = async () => {
 
   return (
     <>
-      <SeoMeta title={"Tags"} />
+      <SeoMeta title={"ট্যাগসমূহ"} />
       <section className="section min-h-dvh">
         <div className="container text-center">
-          {markdownify("Tags", "h1", "h2 mb-16")}
+          {markdownify("ট্যাগসমূহ", "h1", "h2 mb-16")}
           <ul className="space-x-4">
             {tags.map((category, i) => (
               <li key={`category-${i}`} className="inline-block">

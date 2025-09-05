@@ -1,30 +1,30 @@
 ---
-title: "Privacy"
-description: "this is meta description"
+title: "গোপনীয়তা"
+description: "এটি মেটা বর্ণনা"
 draft: false
 ---
 
 
-#### Responsibility of Contributors
+#### অবদানকারীদের দায়িত্ব
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। পিউরিস, ডোনেক নাঙ্ক ইরোস, উলামকর্পের ইড ফিউগিয়াট কুইজক আলকোয়াম সাগিট্টিস। সেম টার্পিস সেড ভিভেরা মাসসা গ্রাভিডা ফারেট্রা। নন ডুই ডলোর পোটেন্টি ইউ ডিজিজনিম ফুসসে। আলট্রাইসেস আমেট, ইন কিউরাবিতুর এ আরকু এ লেক্টাস মরবি ইড। আইয়াকুলিস ইরাট সাগিট্টিস ইন টরটর কার্সাস। মোলেস্টি উরনা ইউ টরটর, ইরাট সেলেরিস্ক এগেট। নাঙ্ক হেন্ড্রেরিট সেড ইন্টারডাম লাকাস। লরেম কুইস ভিভেরা সেড
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+প্রেটিয়াম, আলকোয়াম সিট। প্রেজেন্ট এলিমেন্টাম ম্যাগনা আমেট, টিনসিডান্ট ইরোস, নিভ ইন লিও। মালেসুয়াডা পিউরিস, লাকাস, অ্যাট আলকোয়াম সাসপেন্ডিস টেম্পাস। কুইস টেম্পাস আমেট, ভেলিট নাসসেতুর সলিসিটিউডিন। অ্যাট সলিসিটিউডিন এগেট আমেট ইন। ইউ ভেলিট নাসসেতুর সলিসিটিউডিন এরহডিএফভিএসএফভিআরজিএস এগেট ভিভেরা নেক এলিমেন্টাম। লাকাস, ফ্যাসিলিসিস ট্রিস্টিক লেক্টাস ইন।
 
-#### Gathering of Personal Information
+#### ব্যক্তিগত তথ্য সংগ্রহ
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। পিউরিস, ডোনেক নাঙ্ক ইরোস, উলামকর্পের ইড ফিউগিয়াট কুইজক আলকোয়াম সাগিট্টিস। সেম টার্পিস সেড ভিভেরা মাসসা গ্রাভিডা ফারেট্রা। নন ডুই ডলোর পোটেন্টি ইউ ডিজিজনিম ফুসসে। আলট্রাইসেস আমেট, ইন কিউরাবিতুর এ আরকু এ লেক্টাস মরবি ইড। আইয়াকুলিস ইরাট সাগিট্টিস ইন টরটর কার্সাস। মোলেস্টি উরনা ইউ টরটর, ইরাট সেলেরিস্ক এগেট। নাঙ্ক হেন্ড্রেরিট সেড ইন্টারডাম লাকাস। লরেম কুইস ভিভেরা সেড
 
-#### Protection of  Personal- Information
+#### ব্যক্তিগত তথ্য সুরক্ষা
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। পিউরিস, ডোনেক নাঙ্ক ইরোস, উলামকর্পের ইড ফিউগিয়াট কুইজক আলকোয়াম সাগিট্টিস। সেম টার্পিস সেড ভিভেরা মাসসা গ্রাভিডা ফারেট্রা। নন ডুই ডলোর পোটেন্টি ইউ ডিজিজনিম ফুসসে। আলট্রাইসেস আমেট, ইন কিউরাবিতুর এ আরকু এ লেক্টাস মরবি ইড। আইয়াকুলিস ইরাট সাগিট্টিস ইন টরটর কার্সাস।
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+মোলেস্টি উরনা ইউ টরটর, ইরাট সেলেরিস্ক এগেট। নাঙ্ক হেন্ড্রেরিট সেড ইন্টারডাম লাকাস। লরেম কুইস ভিভেরা সেড
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। পিউরিস, ডোনেক নাঙ্ক ইরোস, উলামকর্পের ইড ফিউগিয়াট
 
-#### Privacy Policy Changes
+#### গোপনীয়তা নীতি পরিবর্তন
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but  limited to, email addresses, telephone numbers
-4. Any Update come in The technology  Customer will get automatic  Notification.
+১. সব Themefisher আইটেম সর্বশেষ প্রযুক্তির সাথে ডিজাইন করা হয়েছে, আমরা সব চেক করি
+২. মন্তব্য যা কোনো ব্যক্তি বা সংস্থার খ্যাতির জন্য হুমকি বা ক্ষতি করে
+৩. ব্যক্তিগত তথ্য সহ, কিন্তু সীমাবদ্ধ নয়, ইমেল ঠিকানা, টেলিফোন নম্বর
+৪. প্রযুক্তিতে কোনো আপডেট এলে গ্রাহক স্বয়ংক্রিয়ভাবে বিজ্ঞপ্তি পাবেন।

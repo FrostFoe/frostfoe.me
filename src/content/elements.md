@@ -1,137 +1,136 @@
 ---
-title: "Elements"
+title: "এলিমেন্টস"
 draft: false
 ---
 
-#### Heading example
+#### শিরোনামের উদাহরণ
 
-Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
+এখানে শিরোনামের একটি উদাহরণ দেওয়া হলো। আপনি নিম্নলিখিত মার্কডাউন নিয়ম ব্যবহার করে এই শিরোনাম ব্যবহার করতে পারেন। উদাহরণস্বরূপ: শিরোনাম ১ এর জন্য `#` এবং শিরোনাম ৬ এর জন্য `######` ব্যবহার করুন।
 
-# Heading 1
+# শিরোনাম ১
 
-## Heading 2
+## শিরোনাম ২
 
-### Heading 3
+### শিরোনাম ৩
 
-#### Heading 4
+#### শিরোনাম ৪
 
-##### Heading 5
+##### শিরোনাম ৫
 
-###### Heading 6
-
----
-
-### Emphasis
-
-The emphasis, aka italics, with _asterisks_ or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-The combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
+###### শিরোনাম ৬
 
 ---
 
-### Link
+### গুরুত্ব আরোপ
 
-[I'm an inline-style link](https://www.google.com)
+ গুরুত্ব আরোপ, অর্থাৎ ইটালিকস, *অ্যাস্টেরিস্ক* বা _আন্ডারস্কোর_ দিয়ে করা হয়।
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+জোরালো গুরুত্ব আরোপ, অর্থাৎ বোল্ড, **অ্যাস্টেরিস্ক** বা **আন্ডারস্কোর** দিয়ে করা হয়।
 
-[I'm a reference-style link][arbitrary case-insensitive reference text]
+**অ্যাস্টেরিস্ক এবং _আন্ডারস্কোর_** দিয়ে সম্মিলিত গুরুত্ব আরোপ।
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+স্ট্রাইকথ্রু দুটি টিল্ড ব্যবহার করে। ~~এটা কেটে দিন।~~
 
-[You can use numbers for reference-style link definitions][1]
+---
 
-Or leave it empty and use the [link text itself].
+### লিঙ্ক
 
-example.com (but not on Github, for example).
+[আমি একটি ইনলাইন-স্টাইল লিঙ্ক](https://www.google.com)
 
-Some text to show that the reference links can follow later.
+[আমি শিরোনামসহ একটি ইনলাইন-স্টাইল লিঙ্ক](https://www.google.com "Google's Homepage")
 
-[arbitrary case-insensitive reference text]: https://www.themefisher.com
+[আমি একটি রেফারেন্স-স্টাইল লিঙ্ক][যেকোনো কেস-ইনসেনসিটিভ রেফারেন্স টেক্সট]
+
+[আমি একটি রিপোজিটরি ফাইলের রিলেটিভ রেফারেন্স](../blob/master/LICENSE)
+
+[আপনি রেফারেন্স-স্টাইল লিঙ্ক সংজ্ঞার জন্য সংখ্যা ব্যবহার করতে পারেন][1]
+
+অথবা এটি খালি রেখে [লিঙ্ক টেক্সট নিজেই] ব্যবহার করুন।
+
+example.com (কিন্তু Github-এ নয়, উদাহরণস্বরূপ)।
+
+কিছু টেক্সট দেখানোর জন্য যে রেফারেন্স লিঙ্কগুলো পরেও আসতে পারে।
+
+[যেকোনো কেস-ইনসেনসিটিভ রেফারেন্স টেক্সট]: https://www.themefisher.com
 [1]: https://gethugothemes.com
-[link text itself]: https://www.getjekyllthemes.com
+[লিঙ্ক টেক্সট নিজেই]: https://www.getjekyllthemes.com
 
 ---
 
-### Paragraph
+### অনুচ্ছেদ
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
----
-
-### Ordered List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
+লরেম ইপসাম ডলোর সিট আমেট কনসেক্টেচার অ্যাডিপিসিসিং এলিট। কোয়াম নিহিল এনিম ম্যাক্সিম কর্পোরিস কামক টোটাম আলকুইড নাম সিন্ট ইনভেন্টোরে অপটিও মোডি নেক লাবোরুম অফিসিয়ালিস নেসেসিটাটিবাস, ফ্যাসিলিস প্লেসিট পারিআতুর! ভলুপটেটম, সেড হারুম পারিআতুর অ্যাডিপিসসি ভলুপটেটস ভলুপটেটম কামক, পোরো সিন্ট মিনিমা সিমিলিক ম্যাগনি পারফেরেন্ডিস ফুগা! অপটিও ভেল ইপসাম এক্সেপচুরি টেম্পোরে রেইসিডিস ইড কুইডem? ভেল ইন, ডলোরিবাস ডেবিটিস নেসসিউন্ট ফুজিট সেকুই ম্যাগনাম অ্যাকুস্যান্টিয়াম মোডি নেক কুইস, ভিটেই ভেলিট, পারিআতুর হারুম অটেম এ! ভেলিট ইম্পেডিট অ্যাটক মেওরেস অ্যানিমি পোসিমাস অ্যাস্পেরিওরেস নাটাস রেপেলেন্ডাস এক্সেপচুরি সিন্ট আর্কিটেক্টো এলিগেন্ডি নন, অমনিস নিহিল। ফ্যাসিলিস, ডলোরেক ইলুম। ফুজিট অপটিও লাবোরুম মিনাস ডেবিটিস নাটাস ইলো পার্সপিসিয়াটিস কর্পোরিস ভলুপটেটম রেরাম লাবোরিওসাম।
 
 ---
 
-### Unordered List
+### ক্রমিক তালিকা
 
-- List item
-- List item
-- List item
-- List item
-- List item
+১. তালিকা আইটেম
+২. তালিকা আইটেম
+৩. তালিকা আইটেম
+৪. তালিকা আইটেম
+৫. তালিকা আইটেম
 
 ---
 
-### Code and Syntax Highlighting
+### অক্রমিক তালিকা
 
-This is an `Inline code` sample.
+- তালিকা আইটেম
+- তালিকা আইটেম
+- তালিকা আইটেম
+- তালিকা আইটেম
+- তালিকা আইটেম
+
+---
+
+### কোড এবং সিনট্যাক্স হাইলাইটিং
+
+এটি একটি `ইনলাইন কোড` নমুনা।
 
 ```javascript
-var s = "JavaScript syntax highlighting";
+var s = "জাভাস্ক্রিপ্ট সিনট্যাক্স হাইলাইটিং";
 alert(s);
 ```
 
 ```python
-s = "Python syntax highlighting"
+s = "পাইথন সিনট্যাক্স হাইলাইটিং"
 print s
 ```
 
 ---
 
-### Blockquote
+### ব্লককোট
 
-> This is a blockquote example.
+> এটি একটি ব্লককোট উদাহরণ।
 
 ---
 
-### Inline HTML
+### ইনলাইন HTML
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+আপনি আপনার মার্কডাউনে रॉ HTML ব্যবহার করতে পারেন এবং এটি বেশিরভাগ ক্ষেত্রে বেশ ভালোভাবে কাজ করবে।
 
 <dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+  <dt>সংজ্ঞা তালিকা</dt>
+  <dd>লোকেরা মাঝে মাঝে ব্যবহার করে।</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <dt>HTML-এ মার্কডাউন</dt>
+  <dd>খুব *ভালোভাবে* **কাজ করে না**। HTML <em>ট্যাগ</em> ব্যবহার করুন।</dd>
 </dl>
 
 ---
 
-### Tables
+### টেবিল
 
-| Tables        |      Are      |  Cool |
+| টেবিল        |      হলো      |  দারুণ |
 | ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+| কলাম ৩ হলো      | ডান-সারিবদ্ধ | $১৬০০ |
+| কলাম ২ হলো      |   কেন্দ্রিক    |   $১২ |
+| জেব্রা স্ট্রাইপ   |   সুন্দর    |    $১ |
 
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
+প্রতিটি হেডার সেলকে আলাদা করার জন্য কমপক্ষে ৩টি ড্যাশ থাকতে হবে।
+বাইরের পাইপ (|) ঐচ্ছিক এবং আপনাকে रॉ মার্কডাউন সুন্দরভাবে সাজানোর দরকার নেই। আপনি ইনলাইন মার্কডাউনও ব্যবহার করতে পারেন।
 
-| Markdown | Less      | Pretty     |
+| মার্কডাউন | কম      | সুন্দর     |
 | -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
+| _এখনও_  | `রেন্ডার` | **সুন্দরভাবে** |
+| ১        | ২         | ৩          |

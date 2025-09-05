@@ -1,22 +1,22 @@
 ---
-title: "Getting Started with Tailwind CSS"
-description: "How to set up and use the world's most popular utility-first CSS framework."
+title: "Tailwind CSS দিয়ে শুরু করা"
+description: "বিশ্বের সবচেয়ে জনপ্রিয় ইউটিলিটি-ফার্স্ট CSS ফ্রেমওয়ার্ক কীভাবে সেট আপ এবং ব্যবহার করবেন।"
 image: "/images/posts/06.jpg"
 date: 2021-02-03
 draft: false
 authors: ["Mark Dinn"]
 tags: ["css", "tailwind"]
-categories: ["Styling"]
+categories: ["স্টাইলিং"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার নামুট রুট্রাম এক্স, ভেনেনাটিস সলিসিটিউডিন উরনা। আলকোয়াম ইরাট ভলুটপাট। ইন্টিজার ইউ ইপ্সাম সেম। ইউটি বিবেন্ডাম লাকাস ভেস্টিবুলাম ম্যাক্সিমাস সাসসিপিট। কুইসকু ভিটা নিভ আইয়াকুলিস, নেক ব্লান্ডিট ইউইসমোড।
 
-Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
+ইটাক এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসিকিউটর কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
 
-### Creative Design
+### সৃজনশীল ডিজাইন
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis, nec blandit euismod.
+নাম ইউটি রুট্রাম এক্স, ভেনেনাটিস সলিসিটিউডিন উরনা। আলকোয়াম ইরাট ভলুটপাট। ইন্টিজার ইউ ইপ্সাম সেম। ইউটি বিবেন্ডাম লাকাস ভেস্টিবুলাম ম্যাক্সিমাস সাসসিপিট। কুইসকু ভিটা নিভ আইয়াকুলিস, নেক ব্লান্ডিট ইউইসমোড।
 
->Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
+>লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাক এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসিকিউটর কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut ius!
+লরেম ইপসাম ডলোর সিট আমেট, কনসেক্টেচার অ্যাডিপিসিসিং এলিট। নেমো ভেল অ্যাড কনসেক্টেচার ইউটি অ্যাপেরিয়াম। ইটাক এলিজেন্ডি নাটাস অ্যাপেরিয়াম? এক্সেপচুরি রেপেলেন্ডাস কনসিকিউটর কুইবাসডাম অপটিও এক্সপেডিটা প্রেইসেন্টিয়াম এস্ট অ্যাডিপিসসি ডলোরেম ইউটি ইউস!

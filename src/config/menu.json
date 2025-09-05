@@ -1,40 +1,40 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "হোম",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "আমাদের সম্পর্কে",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "যোগাযোগ",
       "url": "/contact"
     },
     {
-      "name": "Pages",
+      "name": "পেজসমূহ",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Authors",
+          "name": "লেখকগণ",
           "url": "/authors"
         },
         {
-          "name": "Categories",
+          "name": "বিভাগসমূহ",
           "url": "/categories"
         },
         {
-          "name": "Tags",
+          "name": "ট্যাগসমূহ",
           "url": "/tags"
         },
         {
-          "name": "Elements",
+          "name": "এলিমেন্টস",
           "url": "/elements"
         },
         {
-          "name": "Privacy Policy",
+          "name": "গোপনীয়তা নীতি",
           "url": "/privacy-policy"
         }
       ]
@@ -42,19 +42,19 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "আমাদের সম্পর্কে",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "যোগাযোগ",
       "url": "/contact"
     },
     {
-      "name": "Elements",
+      "name": "এলিমেন্টস",
       "url": "/elements"
     },
     {
-      "name": "Privacy Policy",
+      "name": "গোপনীয়তা নীতি",
       "url": "/privacy-policy"
     }
   ]

@@ -9,10 +9,10 @@ const Categories = async () => {
   const categories = await getTaxonomy(`src/content/${blog_folder}`, "categories");
   return (
     <>
-      <SeoMeta title="Categories" />
+      <SeoMeta title="বিভাগসমূহ" />
       <section className="section min-h-dvh">
         <div className="container text-center">
-          {markdownify("Categories", "h1", "h2 mb-16")}
+          {markdownify("বিভাগসমূহ", "h1", "h2 mb-16")}
           <ul className="space-x-4">
             {categories.map((category, i) => (
               <li key={`category-${i}`} className="inline-block">
