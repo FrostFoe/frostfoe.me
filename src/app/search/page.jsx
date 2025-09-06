@@ -1,28 +1,22 @@
 import { getSinglePage } from '@lib/contentParser';
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+import SearchResults from '@layouts/partials/SearchResults';
+import config from '@config/config.json';
+const { blog_folder } = config.settings;
 
-const SearchResults = dynamic(() => import('@layouts/partials/SearchResults'));
-
-const SearchPage = async () => {
-  const authors = await getSinglePage('src/content/authors');
+const SearchPage = ({ searchParams }) => {
+  const authors = getSinglePage('src/content/authors');
+  const posts = getSinglePage(`src/content/${blog_folder}`);
 
   return (
-    <>
-      <div className="section">
-        <div className="container">
-          <Suspense
-            fallback={
-              <h1 className="h2 mb-8 text-center">
-                অনুসন্ধান করা হচ্ছে <span className="text-primary">...</span>
-              </h1>
-            }
-          >
-            <SearchResults authors={authors} />
-          </Suspense>
-        </div>
+    <div className="section">
+      <div className="container">
+        <SearchResults
+          searchParams={searchParams}
+          posts={posts}
+          authors={authors}
+        />
       </div>
-    </>
+    </div>
   );
 };
 
