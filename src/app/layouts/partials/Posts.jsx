@@ -8,8 +8,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiSolidFolder } from "react-icons/bi";
 import { FaRegClock, FaUserAlt } from "react-icons/fa";
+
 const Posts = ({ posts, className, authors }) => {
   const { summary_length } = config.settings;
+  const authorsBySlug = authors.reduce((acc, author) => {
+    acc[slugify(author.frontmatter.title)] = author;
+    return acc;
+  }, {});
 
   return (
     <div className={` ${className}`}>
@@ -54,28 +59,27 @@ const Posts = ({ posts, className, authors }) => {
             <li>
               {authors &&
                 posts[0].frontmatter.authors &&
-                authors
-                  .filter((author) =>
-                    posts[0].frontmatter.authors
-                      .map((author) => slugify(author))
-                      .includes(slugify(author.frontmatter.title))
-                  )
-                  .map((author, i) => (
-                    <Link
-                      href={`/authors/${slugify(author.frontmatter.title)}`}
-                      key={`author-${i}`}
-                      className="inline-flex items-center font-medium text-primary"
-                    >
-                      <Image
-                        src={author.frontmatter.image}
-                        alt={author.frontmatter.title}
-                        height={25}
-                        width={25}
-                        className="mr-2 rounded-full"
-                      />
-                      <span>{author.frontmatter.title}</span>
-                    </Link>
-                  ))}
+                posts[0].frontmatter.authors.map((authorSlug, i) => {
+                  const author = authorsBySlug[slugify(authorSlug)];
+                  return (
+                    author && (
+                      <Link
+                        href={`/authors/${slugify(author.frontmatter.title)}`}
+                        key={`author-${i}`}
+                        className="inline-flex items-center font-medium text-primary"
+                      >
+                        <Image
+                          src={author.frontmatter.image}
+                          alt={author.frontmatter.title}
+                          height={25}
+                          width={25}
+                          className="mr-2 rounded-full"
+                        />
+                        <span>{author.frontmatter.title}</span>
+                      </Link>
+                    )
+                  );
+                })}
             </li>
             <li className="inline-flex items-center">
               <FaRegClock className="mr-2" />
@@ -143,22 +147,21 @@ const Posts = ({ posts, className, authors }) => {
               <li>
                 {authors &&
                   post.frontmatter.authors &&
-                  authors
-                    .filter((author) =>
-                      post.frontmatter.authors
-                        .map((author) => slugify(author))
-                        .includes(slugify(author.frontmatter.title))
-                    )
-                    .map((author, i) => (
-                      <Link
-                        href={`/authors/${slugify(author.frontmatter.title)}`}
-                        key={`author-${i}`}
-                        className="inline-flex items-center font-medium text-primary"
-                      >
-                        <FaUserAlt className="mr-2" />
-                        {author.frontmatter.title}
-                      </Link>
-                    ))}
+                  post.frontmatter.authors.map((authorSlug, i) => {
+                    const author = authorsBySlug[slugify(authorSlug)];
+                    return (
+                      author && (
+                        <Link
+                          href={`/authors/${slugify(author.frontmatter.title)}`}
+                          key={`author-${i}`}
+                          className="inline-flex items-center font-medium text-primary"
+                        >
+                          <FaUserAlt className="mr-2" />
+                          {author.frontmatter.title}
+                        </Link>
+                      )
+                    );
+                  })}
               </li>
               <li className="inline-flex items-center">
                 <FaRegClock className="mr-2" />

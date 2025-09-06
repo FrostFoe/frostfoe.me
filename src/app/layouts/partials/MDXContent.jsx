@@ -12,7 +12,7 @@ const MDXContent = ({ content }) => {
       <MDXRemote
         source={content}
         components={shortcodes}
-        options={{ mdxOptions }}
+        options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
       />
     </div>
   );

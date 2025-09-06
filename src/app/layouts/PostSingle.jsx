@@ -21,6 +21,13 @@ const PostSingle = ({ post, posts, authors, slug }) => {
   description = description ? description : content.slice(0, 120);
   const similarPosts = similerItems(post, posts, slug);
 
+  const authorsBySlug = authors.reduce((acc, author) => {
+    acc[slugify(author.frontmatter.title)] = author;
+    return acc;
+  }, {});
+
+  const postAuthors = frontmatter.authors.map(authorSlug => authorsBySlug[slugify(authorSlug)]);
+
   return (
     <>
       <section className="section">
@@ -51,13 +58,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
             {markdownify(title, 'h1', 'h2 mb-4')}
             <ul className="mb-8 mt-4 flex flex-wrap items-center justify-center space-x-3 text-text">
               <li>
-                {authors
-                  .filter((author) =>
-                    frontmatter.authors
-                      .map((author) => slugify(author))
-                      .includes(slugify(author.frontmatter.title))
-                  )
-                  .map((author, i) => (
+                {postAuthors.map((author, i) => (
                     <Link
                       href={`/authors/${slugify(author.frontmatter.title)}`}
                       key={`author-${i}`}
