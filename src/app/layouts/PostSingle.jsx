@@ -4,11 +4,10 @@ import dateFormat from '@lib/utils/dateFormat';
 import similerItems from '@lib/utils/similarItems';
 import { humanize, markdownify, slugify } from '@lib/utils/textConverter';
 import { motion } from 'framer-motion';
+import { CalendarDays, Folder, User } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BiSolidFolder } from 'react-icons/bi';
-import { FaRegCalendarAlt, FaUserAlt } from 'react-icons/fa';
 import MDXContent from './partials/MDXContent';
 
 const SimilarPosts = dynamic(() => import('@partials/SimilarPosts'), {
@@ -26,7 +25,9 @@ const PostSingle = ({ post, posts, authors, slug }) => {
     return acc;
   }, {});
 
-  const postAuthors = frontmatter.authors.map(authorSlug => authorsBySlug[slugify(authorSlug)]);
+  const postAuthors = frontmatter.authors.map(
+    (authorSlug) => authorsBySlug[slugify(authorSlug)]
+  );
 
   return (
     <>
@@ -59,22 +60,22 @@ const PostSingle = ({ post, posts, authors, slug }) => {
             <ul className="mb-8 mt-4 flex flex-wrap items-center justify-center space-x-3 text-text">
               <li>
                 {postAuthors.map((author, i) => (
-                    <Link
-                      href={`/authors/${slugify(author.frontmatter.title)}`}
-                      key={`author-${i}`}
-                      className="flex items-center hover:text-primary"
-                    >
-                      <FaUserAlt className="mr-2" />
-                      <span>{author.frontmatter.title}</span>
-                    </Link>
-                  ))}
+                  <Link
+                    href={`/authors/${slugify(author.frontmatter.title)}`}
+                    key={`author-${i}`}
+                    className="flex items-center hover:text-primary"
+                  >
+                    <User className="mr-2 h-5 w-5" />
+                    <span>{author.frontmatter.title}</span>
+                  </Link>
+                ))}
               </li>
               <li className="flex items-center">
-                <FaRegCalendarAlt className="mr-2" />
+                <CalendarDays className="mr-2 h-5 w-5" />
                 <span>{dateFormat(date)}</span>
               </li>
               <li className="flex items-center">
-                <BiSolidFolder className="mr-2" />
+                <Folder className="mr-2 h-5 w-5" />
                 <ul>
                   {categories.map((category, i) => (
                     <li className="inline-block" key={`category-${i}`}>

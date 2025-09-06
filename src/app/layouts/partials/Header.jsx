@@ -1,12 +1,11 @@
 "use client";
 
 import Logo from "@components/Logo";
-import config from "@config/config.json";
 import menu from "@config/menu.json";
+import { Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IoSearch } from "react-icons/io5";
 
 const SearchModal = dynamic(() => import("@layouts/partials/SearchModal"), {
   ssr: false,
@@ -15,7 +14,6 @@ const SearchModal = dynamic(() => import("@layouts/partials/SearchModal"), {
 const Header = () => {
   const { main } = menu;
 
-  //
   const [navFixed, setNavFixed] = useState(false);
   const [searchModal, setSearchModal] = useState(false);
 
@@ -83,12 +81,12 @@ const Header = () => {
           </ul>
           <div className="order-1 ml-auto md:order-2 md:ml-0">
             <div
-              className="cursor-pointer p-2 text-xl text-dark hover:text-primary"
+              className="cursor-pointer p-2 text-dark hover:text-primary"
               onClick={() => {
                 setSearchModal(true);
               }}
             >
-              <IoSearch />
+              <Search className="h-6 w-6" />
             </div>
           </div>
 

@@ -1,8 +1,8 @@
 "use client";
 
+import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { IoCloseCircleOutline } from "react-icons/io5";
 
 const SearchModal = ({ searchModal, setSearchModal }) => {
   const router = useRouter();
@@ -33,7 +33,7 @@ const SearchModal = ({ searchModal, setSearchModal }) => {
   return (
     <div className={`search-modal ${searchModal ? "open" : ""}`}>
       <button onClick={() => setSearchModal(false)} className="search-close">
-        <IoCloseCircleOutline />
+        <X className="h-8 w-8" />
       </button>
       <input
         type="text"

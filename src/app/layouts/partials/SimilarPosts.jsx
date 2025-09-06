@@ -2,9 +2,9 @@
 import dateFormat from '@lib/utils/dateFormat';
 import { humanize, slugify } from '@lib/utils/textConverter';
 import { motion } from 'framer-motion';
+import { Clock, Folder } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaRegClock, FaRegFolder } from 'react-icons/fa';
 
 const SimilarPosts = ({ posts }) => {
   return (
@@ -32,11 +32,11 @@ const SimilarPosts = ({ posts }) => {
           )}
           <ul className="mt-4 text-text">
             <li className="mb-2 mr-4 inline-flex items-center">
-              <FaRegClock className="mr-2" />
+              <Clock className="mr-2 h-4 w-4" />
               {dateFormat(post.frontmatter.date)}
             </li>
             <li className="mb-2 mr-4 inline-flex items-center">
-              <FaRegFolder className="mr-2" />
+              <Folder className="mr-2 h-4 w-4" />
               <ul>
                 {post.frontmatter.categories?.map((category, i) => (
                   <li className="inline-block" key={`category-${i}`}>
