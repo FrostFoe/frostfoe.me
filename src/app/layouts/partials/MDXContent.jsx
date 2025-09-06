@@ -1,3 +1,4 @@
+'use client';
 import shortcodes from '@layouts/shortcodes/all';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
