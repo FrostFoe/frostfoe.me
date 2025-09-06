@@ -18,7 +18,7 @@ const Share = ({ title, description, slug, className }) => {
           target="_blank"
           rel="noreferrer noopener"
           button="true"
-          className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          className="inline-block p-3"
         >
           <IoLogoFacebook />
         </a>
@@ -30,7 +30,7 @@ const Share = ({ title, description, slug, className }) => {
           target="_blank"
           rel="noreferrer noopener"
           button="true"
-          className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          className="inline-block p-3"
         >
           <IoLogoTwitter />
         </a>
@@ -41,7 +41,7 @@ const Share = ({ title, description, slug, className }) => {
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${base_url}/${slug}&title=${title}&summary=${description}&source=${base_url}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          className="inline-block p-3"
         >
           <IoLogoLinkedin />
         </a>
@@ -53,7 +53,7 @@ const Share = ({ title, description, slug, className }) => {
           target="_blank"
           rel="noreferrer noopener"
           button="true"
-          className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          className="inline-block p-3"
         >
           <IoLogoPinterest />
         </a>

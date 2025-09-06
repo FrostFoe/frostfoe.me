@@ -104,7 +104,7 @@
     @apply inline-block;
   }
   .social-icons li a {
-    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white transition-all duration-300 ease-in-out hover:border-primary hover:bg-primary md:h-12 md:w-12;
+    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white hover:border-primary hover:bg-primary md:h-12 md:w-12;
   }
   .social-icons li a svg {
     @apply m-auto h-10 text-lg md:h-12;
@@ -117,7 +117,7 @@
     @apply inline-block;
   }
   .social-icons-simple li a {
-    @apply block p-3 text-dark transition-all duration-300 ease-in-out hover:text-primary hover:scale-110;
+    @apply block p-3 text-dark hover:text-primary;
   }
   .social-icons-simple li a svg {
     @apply text-lg;
@@ -130,7 +130,7 @@
     @apply inline-block;
   }
   .social-share li a {
-    @apply block p-3 transition-all duration-300 ease-in-out hover:text-primary hover:scale-110;
+    @apply block p-3 hover:text-primary;
   }
 
   .form-input,
@@ -139,7 +139,7 @@
   }
 
   .content {
-    @apply prose-blockquote:bg-theme-light prose max-w-none prose-headings:font-bold prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h6:mb-6 prose-blockquote:border-primary prose-blockquote:p-4 md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
+    @apply prose-blockquote:bg-theme-light prose max-w-none prose-headings:font-bold prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h6:mb-6 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:p-4 md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
   }
 
   input#nav-toggle:checked ~ label#show-button {
@@ -171,7 +171,7 @@
   }
 
   .nav-link {
-    @apply p-3 text-lg font-semibold text-dark transition-all duration-300 ease-in-out hover:text-primary;
+    @apply p-3 text-lg font-semibold text-dark hover:text-primary;
   }
 
   .nav-dropdown {
@@ -179,7 +179,7 @@
   }
 
   .nav-dropdown-list {
-    @apply z-10 rounded-lg bg-white p-4 shadow transition-all duration-300 ease-in-out;
+    @apply z-10 rounded-lg bg-white p-4 shadow;
   }
 
   .nav-dropdown-item {
@@ -187,11 +187,11 @@
   }
 
   .nav-dropdown-link {
-    @apply min-w-[150px] py-1 text-lg font-semibold text-dark transition-all duration-300 ease-in-out hover:text-primary;
+    @apply min-w-[150px] py-1 text-lg font-semibold text-dark hover:text-primary;
   }
 
   .search-modal {
-    @apply invisible absolute top-0 left-0 right-0 z-10 h-full bg-white opacity-0 transition-all duration-300 ease-in-out;
+    @apply invisible absolute top-0 left-0 right-0 z-10 h-full bg-white opacity-0;
   }
   .search-modal .form-input {
     @apply h-full w-full border-0 text-lg;
@@ -204,7 +204,7 @@
   }
 
   .btn {
-    @apply inline-block rounded-lg border px-5 py-2 font-semibold transition-all duration-300 ease-in-out;
+    @apply inline-block rounded-lg border px-5 py-2 font-semibold;
   }
 
   .btn-primary {
@@ -220,11 +220,6 @@
 
   .preloader {
     @apply fixed top-0 left-0 w-full h-full bg-white z-[9999] flex items-center justify-center;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  }
-
-  .preloader.hidden {
-    @apply opacity-0 invisible;
   }
 
   .loader {
@@ -250,7 +245,6 @@
     }
   }
 
-  /* Post card hover effect */
   .post-card {
     @apply transition-transform duration-300 ease-in-out;
   }
