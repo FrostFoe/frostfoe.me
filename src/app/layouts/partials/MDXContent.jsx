@@ -1,10 +1,18 @@
 import shortcodes from '@layouts/shortcodes/all';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 const MDXContent = ({ content }) => {
   const mdxOptions = {
     remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+      [rehypePrettyCode, { theme: 'one-dark-pro' }],
+    ],
   };
 
   return (
@@ -12,7 +20,7 @@ const MDXContent = ({ content }) => {
       <MDXRemote
         source={content}
         components={shortcodes}
-        options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+        options={{ mdxOptions: mdxOptions }}
       />
     </div>
   );
