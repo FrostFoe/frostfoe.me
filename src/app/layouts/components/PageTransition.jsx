@@ -9,9 +9,7 @@ const PageTransition = ({ children }) => {
 
   return (
     <Suspense fallback={<Preloader />}>
-      <div key={pathname} className="page-transition">
-        {children}
-      </div>
+      <div key={pathname}>{children}</div>
     </Suspense>
   );
 };

@@ -1,15 +1,17 @@
-import Share from "@components/Share";
-import dateFormat from "@lib/utils/dateFormat";
-import similerItems from "@lib/utils/similarItems";
-import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import Link from "next/link";
-import { BiSolidFolder } from "react-icons/bi";
-import { FaRegCalendarAlt, FaUserAlt } from "react-icons/fa";
-import MDXContent from "./partials/MDXContent";
+'use client';
+import Share from '@components/Share';
+import dateFormat from '@lib/utils/dateFormat';
+import similerItems from '@lib/utils/similarItems';
+import { humanize, markdownify, slugify } from '@lib/utils/textConverter';
+import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BiSolidFolder } from 'react-icons/bi';
+import { FaRegCalendarAlt, FaUserAlt } from 'react-icons/fa';
+import MDXContent from './partials/MDXContent';
 
-const SimilarPosts = dynamic(() => import("@partials/SimilarPosts"), {
+const SimilarPosts = dynamic(() => import('@partials/SimilarPosts'), {
   ssr: false,
 });
 
@@ -23,9 +25,19 @@ const PostSingle = ({ post, posts, authors, slug }) => {
     <>
       <section className="section">
         <div className="container">
-          <article className="text-center">
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
             {image && (
-              <div className="mb-10">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="mb-10"
+              >
                 <Image
                   src={image}
                   height={700}
@@ -34,9 +46,9 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                   className="rounded-lg"
                   priority={true}
                 />
-              </div>
+              </motion.div>
             )}
-            {markdownify(title, "h1", "h2 mb-4")}
+            {markdownify(title, 'h1', 'h2 mb-4')}
             <ul className="mb-8 mt-4 flex flex-wrap items-center justify-center space-x-3 text-text">
               <li>
                 {authors
@@ -100,7 +112,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                 slug={slug}
               />
             </div>
-          </article>
+          </motion.article>
         </div>
       </section>
       {similarPosts.length > 0 && (

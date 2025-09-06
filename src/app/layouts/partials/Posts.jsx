@@ -25,8 +25,9 @@ const Posts = ({ posts, className, authors }) => {
               },
             }}
             viewport={{ once: true }}
+            className="mb-6"
           >
-            <Link href={`/${posts[0].slug}`} className="mb-6 block">
+            <Link href={`/${posts[0].slug}`} className="block">
               <Image
                 className="w-full rounded-lg"
                 src={posts[0].frontmatter.image}
@@ -114,9 +115,10 @@ const Posts = ({ posts, className, authors }) => {
       <div className="row">
         {posts.slice(1).map((post, i) => (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{
               opacity: 1,
+              y: 0,
               transition: {
                 delay: i * 0.1,
                 duration: 0.5,

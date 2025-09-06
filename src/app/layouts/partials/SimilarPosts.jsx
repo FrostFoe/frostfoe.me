@@ -1,14 +1,26 @@
-import dateFormat from "@lib/utils/dateFormat";
-import { humanize, slugify } from "@lib/utils/textConverter";
-import Image from "next/image";
-import Link from "next/link";
-import { FaRegClock, FaRegFolder } from "react-icons/fa";
+'use client';
+import dateFormat from '@lib/utils/dateFormat';
+import { humanize, slugify } from '@lib/utils/textConverter';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaRegClock, FaRegFolder } from 'react-icons/fa';
 
 const SimilarPosts = ({ posts }) => {
   return (
     <div className="row justify-center">
       {posts.map((post, i) => (
-        <div key={`key-${i}`} className={"col-12 mb-4 sm:col-4"}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: i * 0.1, duration: 0.3 },
+          }}
+          viewport={{ once: true }}
+          key={`key-${i}`}
+          className={'col-12 mb-4 sm:col-4'}
+        >
           {post.frontmatter.image && (
             <Image
               className="rounded-lg"
@@ -47,7 +59,7 @@ const SimilarPosts = ({ posts }) => {
               {post.frontmatter.title}
             </Link>
           </h3>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

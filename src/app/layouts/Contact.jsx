@@ -1,5 +1,7 @@
-import config from "@config/config";
-import { markdownify } from "@lib/utils/textConverter";
+'use client';
+import config from '@config/config';
+import { markdownify } from '@lib/utils/textConverter';
+import { motion } from 'framer-motion';
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -7,9 +9,14 @@ const Contact = ({ data }) => {
   const { contact_form_action } = config.params;
 
   return (
-    <section className="section">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="section"
+    >
       <div className="container max-w-[700px]">
-        {markdownify(title, "h1", "h2 mb-8 text-center")}
+        {markdownify(title, 'h1', 'h2 mb-8 text-center')}
         <form
           className="contact-form"
           method="POST"
@@ -57,7 +64,7 @@ const Contact = ({ data }) => {
           <button className="btn btn-outline-primary">এখনই জমা দিন</button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
