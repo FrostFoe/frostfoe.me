@@ -104,7 +104,7 @@
     @apply inline-block;
   }
   .social-icons li a {
-    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-dark hover:border-primary hover:bg-primary md:h-12 md:w-12;
+    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-light hover:border-primary hover:bg-primary hover:text-white md:h-12 md:w-12;
   }
   .social-icons li a svg {
     @apply m-auto h-10 text-lg md:h-12;

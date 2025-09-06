@@ -1,32 +1,33 @@
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Linkedin,
-  Github,
-  Gitlab,
-  Book, // Using Book for Medium as a generic icon
-  Codepen,
-  KanbanSquare, // Using KanbanSquare for Bitbucket
-  Dribbble,
-  Behance,
-  Pinterest,
-  Disc, // Using Disc for Soundcloud
-  Tumblr,
-  Reddit,
-  MessageCircle, // Using MessageCircle for VK
-  Phone, // Using Phone for Whatsapp
-  Camera, // Using Camera for Snapchat
-  Video, // Using Video for Vimeo
-  Music, // Using Music for Tiktok
-  Building2, // Using Building2 for Foursquare
-  Rss,
-  Mail,
-  Globe,
-  MapPin,
-  MessageSquare, // Using MessageSquare for Skype
-} from 'lucide-react';
+  IoLogoFacebook,
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoYoutube,
+  IoLogoLinkedin,
+  IoLogoGithub,
+  IoLogoGitlab,
+  IoLogoMedium,
+  IoLogoCodepen,
+  IoLogoBitbucket,
+  IoLogoDribbble,
+  IoLogoBehance,
+  IoLogoPinterest,
+  IoLogoSoundcloud,
+  IoLogoTumblr,
+  IoLogoReddit,
+  IoChatbubbles, // Using for VK
+  IoLogoWhatsapp,
+  IoLogoSnapchat,
+  IoLogoVimeo,
+  IoLogoTiktok,
+  IoBusiness, // Using for Foursquare
+  IoRss,
+  IoMail,
+  IoCall,
+  IoLocation,
+  IoLogoSkype,
+  IoGlobe,
+} from 'react-icons/io5';
 
 const Social = ({ source, className }) => {
   const {
@@ -61,34 +62,34 @@ const Social = ({ source, className }) => {
   } = source;
 
   const socialIcons = {
-    facebook: Facebook,
-    twitter: Twitter,
-    instagram: Instagram,
-    youtube: Youtube,
-    linkedin: Linkedin,
-    github: Github,
-    gitlab: Gitlab,
-    medium: Book,
-    codepen: Codepen,
-    bitbucket: KanbanSquare,
-    dribbble: Dribbble,
-    behance: Behance,
-    pinterest: Pinterest,
-    soundcloud: Disc,
-    tumblr: Tumblr,
-    reddit: Reddit,
-    vk: MessageCircle,
-    whatsapp: Phone,
-    snapchat: Camera,
-    vimeo: Video,
-    tiktok: Music,
-    foursquare: Building2,
-    rss: Rss,
-    email: Mail,
-    phone: Phone,
-    address: MapPin,
-    skype: MessageSquare,
-    website: Globe,
+    facebook: IoLogoFacebook,
+    twitter: IoLogoTwitter,
+    instagram: IoLogoInstagram,
+    youtube: IoLogoYoutube,
+    linkedin: IoLogoLinkedin,
+    github: IoLogoGithub,
+    gitlab: IoLogoGitlab,
+    medium: IoLogoMedium,
+    codepen: IoLogoCodepen,
+    bitbucket: IoLogoBitbucket,
+    dribbble: IoLogoDribbble,
+    behance: IoLogoBehance,
+    pinterest: IoLogoPinterest,
+    soundcloud: IoLogoSoundcloud,
+    tumblr: IoLogoTumblr,
+    reddit: IoLogoReddit,
+    vk: IoChatbubbles,
+    whatsapp: IoLogoWhatsapp,
+    snapchat: IoLogoSnapchat,
+    vimeo: IoLogoVimeo,
+    tiktok: IoLogoTiktok,
+    foursquare: IoBusiness,
+    rss: IoRss,
+    email: IoMail,
+    phone: IoCall,
+    address: IoLocation,
+    skype: IoLogoSkype,
+    website: IoGlobe,
   };
 
   return (
@@ -114,9 +115,8 @@ const Social = ({ source, className }) => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="inline-block p-3 text-dark hover:text-primary"
               >
-                <Icon className="h-6 w-6" />
+                <Icon />
               </a>
             </li>
           );

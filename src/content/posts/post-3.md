@@ -4,7 +4,7 @@ description: "রিঅ্যাক্ট কম্পোনেন্ট স্�
 date: 2022-06-02
 image: "/images/posts/03.jpg"
 categories: ["স্টাইলিং"]
-authors: ["Mark Dinn"]
+authors: ["FrostFoe"]
 tags: ["css", "react"]
 draft: false
 ---

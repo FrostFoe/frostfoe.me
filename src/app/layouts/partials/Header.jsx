@@ -2,10 +2,10 @@
 
 import Logo from "@components/Logo";
 import menu from "@config/menu.json";
-import { Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BiSearchAlt } from "react-icons/bi";
 
 const SearchModal = dynamic(() => import("@layouts/partials/SearchModal"), {
   ssr: false,
@@ -86,7 +86,7 @@ const Header = () => {
                 setSearchModal(true);
               }}
             >
-              <Search className="h-6 w-6" />
+              <BiSearchAlt size={24} />
             </div>
           </div>
 

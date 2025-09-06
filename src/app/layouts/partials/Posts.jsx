@@ -4,9 +4,10 @@ import config from "@config/config.json";
 import dateFormat from "@lib/utils/dateFormat";
 import { humanize, slugify } from "@lib/utils/textConverter";
 import { motion } from "framer-motion";
-import { Folder, User, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { BiSolidFolder } from "react-icons/bi";
+import { FaRegClock, FaUserAlt } from "react-icons/fa";
 
 const Posts = ({ posts, className, authors }) => {
   const { summary_length } = config.settings;
@@ -81,11 +82,11 @@ const Posts = ({ posts, className, authors }) => {
                 })}
             </li>
             <li className="inline-flex items-center">
-              <Clock className="mr-2 h-4 w-4" />
+              <FaRegClock className="mr-1.5" />
               {dateFormat(posts[0].frontmatter.date)}
             </li>
             <li className="inline-flex items-center">
-              <Folder className="mr-2 h-4 w-4" />
+              <BiSolidFolder className="mr-1.5" />
               <ul>
                 {posts[0].frontmatter.categories?.map((category, i) => (
                   <li className="inline-block" key={`category-${i}`}>
@@ -155,7 +156,7 @@ const Posts = ({ posts, className, authors }) => {
                           key={`author-${i}`}
                           className="inline-flex items-center font-medium text-primary"
                         >
-                          <User className="mr-2 h-4 w-4" />
+                          <FaUserAlt className="mr-1.5" />
                           {author.frontmatter.title}
                         </Link>
                       )
@@ -163,11 +164,11 @@ const Posts = ({ posts, className, authors }) => {
                   })}
               </li>
               <li className="inline-flex items-center">
-                <Clock className="mr-2 h-4 w-4" />
+                <FaRegClock className="mr-1.5" />
                 {dateFormat(post.frontmatter.date)}
               </li>
               <li className="inline-flex items-center">
-                <Folder className="mr-2 h-4 w-4" />
+                <BiSolidFolder className="mr-1.5" />
                 <ul>
                   {post.frontmatter.categories?.map((category, i) => (
                     <li className="inline-block" key={`category-${i}`}>

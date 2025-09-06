@@ -4,7 +4,7 @@ description: "স্কেলেবল এবং রক্ষণাবেক্�
 date: 2023-04-04
 image: "/images/posts/01.jpg"
 categories: ["ডেভেলপমেন্ট"]
-authors: ["Mark Dinn"]
+authors: ["FrostFoe"]
 tags: ["api", "node.js"]
 draft: false
 ---
