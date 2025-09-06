@@ -7,21 +7,10 @@ import { sortByDate } from './utils/sortFunctions';
 export const getListPage = (filePath) => {
   const pageData = fs.readFileSync(path.join(filePath), 'utf-8');
   const pageDataParsed = matter(pageData);
-  const notFoundPage = fs.readFileSync(path.join('src/content/404.md'), 'utf-8');
-  const notFoundDataParsed = matter(notFoundPage);
-  let frontmatter, content;
-
-  if (pageDataParsed) {
-    content = pageDataParsed.content;
-    frontmatter = pageDataParsed.data;
-  } else {
-    content = notFoundDataParsed.content;
-    frontmatter = notFoundDataParsed.data;
-  }
 
   return {
-    frontmatter,
-    content,
+    frontmatter: pageDataParsed.data,
+    content: pageDataParsed.content,
   };
 };
 
