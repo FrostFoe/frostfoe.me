@@ -1,6 +1,6 @@
 'use client';
 import shortcodes from '@layouts/shortcodes/all';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { MDXRemote } from 'next-mdx-remote';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -21,7 +21,9 @@ const MDXContent = ({ content }) => {
       <MDXRemote
         source={content}
         components={shortcodes}
-        options={{ mdxOptions: mdxOptions }}
+        options={{
+          mdxOptions: mdxOptions,
+        }}
       />
     </div>
   );
