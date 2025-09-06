@@ -1,4 +1,7 @@
 import {
+  FaRss
+} from "react-icons/fa";
+import {
   IoLogoFacebook,
   IoLogoTwitter,
   IoLogoInstagram,
@@ -21,7 +24,6 @@ import {
   IoLogoVimeo,
   IoLogoTiktok,
   IoBusiness, // Using for Foursquare
-  IoRss,
   IoMail,
   IoCall,
   IoLocation,
@@ -84,7 +86,7 @@ const Social = ({ source, className }) => {
     vimeo: IoLogoVimeo,
     tiktok: IoLogoTiktok,
     foursquare: IoBusiness,
-    rss: IoRss,
+    rss: FaRss,
     email: IoMail,
     phone: IoCall,
     address: IoLocation,
