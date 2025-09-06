@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-white py-2 transition-all ${
+        className={`sticky top-0 z-50 bg-body py-2 transition-all ${
           navFixed ? "shadow" : "pt-4 md:pt-8"
         }`}
       >

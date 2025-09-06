@@ -10,6 +10,14 @@
       "@json/*": ["src/json/*"],
       "@hooks/*": ["src/hooks/*"],
       "@lib/*": ["src/app/lib/*"]
-    }
-  }
+    },
+    "jsx": "preserve"
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

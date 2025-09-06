@@ -2,6 +2,7 @@ import dateFormat from "@lib/utils/dateFormat";
 import { humanize, slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
+import { FaRegClock, FaRegFolder } from "react-icons/fa";
 
 const SimilarPosts = ({ posts }) => {
   return (
@@ -18,10 +19,12 @@ const SimilarPosts = ({ posts }) => {
             />
           )}
           <ul className="mt-4 text-text">
-            <li className="mb-2 mr-4 inline-block">
+            <li className="mb-2 mr-4 inline-flex items-center">
+              <FaRegClock className="mr-2" />
               {dateFormat(post.frontmatter.date)}
             </li>
-            <li className="mb-2 mr-4 inline-block">
+            <li className="mb-2 mr-4 inline-flex items-center">
+              <FaRegFolder className="mr-2" />
               <ul>
                 {post.frontmatter.categories?.map((category, i) => (
                   <li className="inline-block" key={`category-${i}`}>
@@ -29,7 +32,7 @@ const SimilarPosts = ({ posts }) => {
                       href={`/categories/${slugify(category)}`}
                       className="mr-3 hover:text-primary"
                     >
-                      &#9635; {humanize(category)}
+                      {humanize(category)}
                     </Link>
                   </li>
                 ))}
@@ -37,7 +40,10 @@ const SimilarPosts = ({ posts }) => {
             </li>
           </ul>
           <h3 className="h4">
-            <Link href={`/${post.slug}`} className="block hover:text-primary">
+            <Link
+              href={`/${post.slug}`}
+              className="block font-bold hover:text-primary"
+            >
               {post.frontmatter.title}
             </Link>
           </h3>

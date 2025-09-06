@@ -69,8 +69,9 @@ const Social = ({ source, className }) => {
             href={facebook}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
           >
-            <IoLogoFacebook />
+            <IoLogoFacebook className="m-auto h-full" />
           </a>
         </li>
       )}
@@ -81,8 +82,9 @@ const Social = ({ source, className }) => {
             href={twitter}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
           >
-            <IoLogoTwitter />
+            <IoLogoTwitter className="m-auto h-full" />
           </a>
         </li>
       )}
@@ -93,8 +95,9 @@ const Social = ({ source, className }) => {
             href={instagram}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
           >
-            <IoLogoInstagram />
+            <IoLogoInstagram className="m-auto h-full" />
           </a>
         </li>
       )}
@@ -105,8 +108,9 @@ const Social = ({ source, className }) => {
             href={youtube}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
           >
-            <IoLogoYoutube />
+            <IoLogoYoutube className="m-auto h-full" />
           </a>
         </li>
       )}
@@ -117,8 +121,9 @@ const Social = ({ source, className }) => {
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
           >
-            <IoLogoLinkedin />
+            <IoLogoLinkedin className="m-auto h-full" />
           </a>
         </li>
       )}
@@ -129,6 +134,7 @@ const Social = ({ source, className }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoGithub />
           </a>
@@ -141,6 +147,7 @@ const Social = ({ source, className }) => {
             href={gitlab}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoGitlab />
           </a>
@@ -153,6 +160,7 @@ const Social = ({ source, className }) => {
             href={medium}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoMedium />
           </a>
@@ -165,6 +173,7 @@ const Social = ({ source, className }) => {
             href={codepen}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoCodepen />
           </a>
@@ -177,6 +186,7 @@ const Social = ({ source, className }) => {
             href={bitbucket}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoBitbucket />
           </a>
@@ -189,6 +199,7 @@ const Social = ({ source, className }) => {
             href={dribbble}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoDribbble />
           </a>
@@ -201,6 +212,7 @@ const Social = ({ source, className }) => {
             href={behance}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoBehance />
           </a>
@@ -213,6 +225,7 @@ const Social = ({ source, className }) => {
             href={pinterest}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoPinterest />
           </a>
@@ -225,6 +238,7 @@ const Social = ({ source, className }) => {
             href={soundcloud}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoSoundcloud />
           </a>
@@ -237,6 +251,7 @@ const Social = ({ source, className }) => {
             href={tumblr}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoTumblr />
           </a>
@@ -249,6 +264,7 @@ const Social = ({ source, className }) => {
             href={reddit}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoReddit />
           </a>
@@ -261,6 +277,7 @@ const Social = ({ source, className }) => {
             href={vk}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoVk />
           </a>
@@ -273,6 +290,7 @@ const Social = ({ source, className }) => {
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoWhatsapp />
           </a>
@@ -285,6 +303,7 @@ const Social = ({ source, className }) => {
             href={snapchat}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoSnapchat />
           </a>
@@ -297,6 +316,7 @@ const Social = ({ source, className }) => {
             href={vimeo}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoVimeo />
           </a>
@@ -309,6 +329,7 @@ const Social = ({ source, className }) => {
             href={tiktok}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoTiktok />
           </a>
@@ -321,6 +342,7 @@ const Social = ({ source, className }) => {
             href={foursquare}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoFoursquare />
           </a>
@@ -333,6 +355,7 @@ const Social = ({ source, className }) => {
             href={skype}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoSkype />
           </a>
@@ -345,6 +368,7 @@ const Social = ({ source, className }) => {
             href={website}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoGlobeOutline />
           </a>
@@ -357,6 +381,7 @@ const Social = ({ source, className }) => {
             href={rss}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLogoRss />
           </a>
@@ -364,14 +389,22 @@ const Social = ({ source, className }) => {
       )}
       {email && (
         <li className="inline-block">
-          <a aria-label="email" href={`mailto:${email}`}>
+          <a
+            aria-label="email"
+            href={`mailto:${email}`}
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          >
             <IoMail />
           </a>
         </li>
       )}
       {phone && (
         <li className="inline-block">
-          <a aria-label="telephone" href={`tel:${phone}`}>
+          <a
+            aria-label="telephone"
+            href={`tel:${phone}`}
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
+          >
             <IoCall />
           </a>
         </li>
@@ -383,6 +416,7 @@ const Social = ({ source, className }) => {
             href={address}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            className="inline-block transform-gpu p-3 transition-all duration-300 ease-in-out hover:scale-110"
           >
             <IoLocation />
           </a>
