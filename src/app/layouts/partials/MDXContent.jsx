@@ -1,13 +1,10 @@
-import shortcodes from "@layouts/shortcodes/all";
-import "highlight.js/styles/atom-one-dark.css";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
+import shortcodes from '@layouts/shortcodes/all';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 
 const MDXContent = ({ content }) => {
   const mdxOptions = {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
   };
 
   return (

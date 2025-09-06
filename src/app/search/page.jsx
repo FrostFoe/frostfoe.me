@@ -1,9 +1,11 @@
-import SearchResults from "@layouts/partials/SearchResults";
-import { getSinglePage } from "@lib/contentParser";
-import { Suspense } from "react";
+import { getSinglePage } from '@lib/contentParser';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+
+const SearchResults = dynamic(() => import('@layouts/partials/SearchResults'));
 
 const SearchPage = async () => {
-  const authors = await getSinglePage("src/content/authors");
+  const authors = await getSinglePage('src/content/authors');
 
   return (
     <>
