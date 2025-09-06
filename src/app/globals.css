@@ -59,19 +59,19 @@
   .container {
     @apply mx-auto max-w-6xl px-4;
   }
-  
+
   .row {
     @apply -mx-4 flex flex-wrap;
   }
-  
+
   .col-12 {
     @apply w-full px-4;
   }
-  
+
   .sm\:col-6 {
     @apply sm:w-1/2;
   }
-  
+
   .md\:col-4 {
     @apply md:w-1/3;
   }
@@ -104,7 +104,7 @@
     @apply inline-block;
   }
   .social-icons li a {
-    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-white hover:border-primary hover:bg-primary md:h-12 md:w-12;
+    @apply block h-10 w-10 rounded-lg border border-light bg-transparent text-center text-dark hover:border-primary hover:bg-primary md:h-12 md:w-12;
   }
   .social-icons li a svg {
     @apply m-auto h-10 text-lg md:h-12;
@@ -139,7 +139,7 @@
   }
 
   .content {
-    @apply prose-blockquote:bg-theme-light prose max-w-none prose-headings:font-bold prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h6:mb-6 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:p-4 md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
+    @apply prose-blockquote:bg-theme-light prose max-w-none prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h6:mb-6 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:px-8 prose-blockquote:py-4 md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
   }
 
   input#nav-toggle:checked ~ label#show-button {
@@ -219,37 +219,17 @@
   }
 
   .preloader {
-    @apply fixed top-0 left-0 w-full h-full bg-white z-[9999] flex items-center justify-center;
+    @apply fixed top-0 left-0 z-[9999] flex h-full w-full items-center justify-center bg-white;
   }
 
   .loader {
-    @apply w-12 h-12 rounded-full border-4 border-t-primary border-gray-200 animate-spin;
+    @apply h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-primary;
   }
 
   @keyframes spin {
     to {
       transform: rotate(360deg);
     }
-  }
-
-  .page-transition {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .post-card {
-    @apply transition-transform duration-300 ease-in-out;
-  }
-  .post-card:hover {
-    @apply -translate-y-1;
   }
 }
 
