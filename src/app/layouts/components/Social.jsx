@@ -69,7 +69,7 @@ const Social = ({ source, className }) => {
             href={facebook}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
+            className="inline-block h-12 w-12 transform-gpu border border-border bg-transparent text-center text-dark transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary hover:text-white"
           >
             <IoLogoFacebook className="m-auto h-full" />
           </a>
@@ -82,7 +82,7 @@ const Social = ({ source, className }) => {
             href={twitter}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
+            className="inline-block h-12 w-12 transform-gpu border border-border bg-transparent text-center text-dark transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary hover:text-white"
           >
             <IoLogoTwitter className="m-auto h-full" />
           </a>
@@ -95,7 +95,7 @@ const Social = ({ source, className }) => {
             href={instagram}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
+            className="inline-block h-12 w-12 transform-gpu border border-border bg-transparent text-center text-dark transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary hover:text-white"
           >
             <IoLogoInstagram className="m-auto h-full" />
           </a>
@@ -108,7 +108,7 @@ const Social = ({ source, className }) => {
             href={youtube}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
+            className="inline-block h-12 w-12 transform-gpu border border-border bg-transparent text-center text-dark transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary hover:text-white"
           >
             <IoLogoYoutube className="m-auto h-full" />
           </a>
@@ -121,7 +121,7 @@ const Social = ({ source, className }) => {
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="inline-block h-12 w-12 transform-gpu border border-primary-foreground bg-transparent text-center text-primary-foreground transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary"
+            className="inline-block h-12 w-12 transform-gpu border border-border bg-transparent text-center text-dark transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary hover:text-white"
           >
             <IoLogoLinkedin className="m-auto h-full" />
           </a>
