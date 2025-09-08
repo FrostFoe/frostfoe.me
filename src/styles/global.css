@@ -66,7 +66,7 @@ header > nav {
 }
 
 main {
-  @apply mx-auto flex flex-col items-start justify-between px-4 pt-0 pb-0 sm:items-center;
+  @apply mx-auto flex flex-col items-center justify-between px-4 pt-0 pb-0;
 }
 
 footer {
@@ -135,7 +135,7 @@ html.dark a:not(.button-link):hover {
 
 @media (orientation: portrait) {
   .page-content {
-    text-align: left;
+    text-align: center;
   }
 }
 
