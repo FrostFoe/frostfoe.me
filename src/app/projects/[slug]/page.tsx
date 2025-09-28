@@ -1,8 +1,6 @@
-// This file is being moved to /src/app/projects/[slug]/page.tsx
-// Paths to components and css are updated
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
-import { Mdx } from "@/app/components/mdx";
+import { Mdx } from "@/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";

@@ -1,10 +1,8 @@
-// This file is being moved to /src/app/contact/page.tsx
-// Paths to components are updated
 "use client";
 import { Github, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
-import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
+import { Navigation } from "@/components/nav";
+import { Card } from "@/components/card";
 
 const socials = [
 	{

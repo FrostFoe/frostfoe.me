@@ -1,8 +1,6 @@
-// This file is being moved from /app/page.tsx to /src/app/page.tsx
-// Paths to components are updated
 import Link from "next/link";
 import React from "react";
-import Particles from "./components/particles";
+import Particles from "@/components/particles";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -44,10 +42,10 @@ export default function Home() {
             className="underline duration-500 hover:text-zinc-300"
           >
             unkey.dev
-          </Link> to solve API authentication and authorization for developers.
+          </Link>{" "}
+          to solve API authentication and authorization for developers.
         </h2>
       </div>
     </div>
   );
-
 }
