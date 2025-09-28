@@ -14,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-shade="950" data-rounded="3xlarge">
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" media="(prefers-color-scheme: light)" />
-        <link rel="icon" type="image/svg+xml" href="/darkfavicon.svg" media="(prefers-color-scheme: dark)" />
-      </head>
-      <body className="bg-white dark:bg-gray-950 font-body antialiased">
+      <body>
         <header id="header" className="group">
             <nav className="fixed overflow-hidden z-20 w-full border-b bg-white/50 dark:bg-gray-950/50 backdrop-blur-2xl">
                 <div className="px-6 m-auto max-w-6xl ">
