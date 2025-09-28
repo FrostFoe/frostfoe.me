@@ -1,4 +1,3 @@
-/* This file is being moved from /global.css to /src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,3 +7,4 @@
     -webkit-text-stroke: 1px rgba(255,255,255,0.3);
   }
 } 
+

@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/projects/article.tsx
-// The content is the same as the original app/projects/article.tsx
 import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { Eye, View } from "lucide-react";

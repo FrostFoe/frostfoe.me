@@ -1,4 +1,3 @@
-// This file is being moved from /util/mouse.ts to /src/lib/mouse.ts
 import { useEffect, useState } from "react";
 
 interface MousePosition {

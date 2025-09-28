@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/projects/layout.tsx
-// The content is the same as the original app/projects/layout.tsx
 export default function ProjectsLayout({
 	children,
 }: { children: React.ReactNode }) {

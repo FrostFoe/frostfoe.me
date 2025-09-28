@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/projects/[slug]/view.tsx
-// The content is the same as the original app/projects/[slug]/view.tsx
 "use client";
 
 import { useEffect } from "react";

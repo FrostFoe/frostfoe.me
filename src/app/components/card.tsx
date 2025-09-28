@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/components/card.tsx
-// The content is the same as the original app/components/card.tsx
 "use client";
 import {
 	motion,

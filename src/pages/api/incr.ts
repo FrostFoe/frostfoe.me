@@ -1,11 +1,15 @@
-// This file is being moved from /pages/api/incr.ts to /src/app/api/incr/route.ts
-// It has been updated to use the App Router's route handler syntax
 import { Redis } from "@upstash/redis";
 import { NextRequest, NextResponse } from "next/server";
 
 const redis = Redis.fromEnv();
+export const config = {
+  runtime: "edge",
+};
 
-export async function POST(req: NextRequest): Promise<NextResponse> {
+export default async function incr(req: NextRequest): Promise<NextResponse> {
+  if (req.method !== "POST") {
+    return new NextResponse("use POST", { status: 405 });
+  }
   if (req.headers.get("Content-Type") !== "application/json") {
     return new NextResponse("must be json", { status: 400 });
   }

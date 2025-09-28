@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/components/mdx.tsx
-// The content is the same as the original app/components/mdx.tsx
 // @ts-nocheck
 import * as React from "react";
 import Image from "next/image";

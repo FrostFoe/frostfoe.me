@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/projects/[slug]/header.tsx
-// The content is the same as the original app/projects/[slug]/header.tsx
 "use client";
 import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
 import Link from "next/link";

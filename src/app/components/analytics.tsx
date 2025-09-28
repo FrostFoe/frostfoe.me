@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/components/analytics.tsx
-// The content is the same as the original app/components/analytics.tsx
 "use client";
 
 export function Analytics() {

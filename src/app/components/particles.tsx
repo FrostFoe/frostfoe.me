@@ -1,9 +1,7 @@
-// This file is being moved to /src/app/components/particles.tsx
-// Path to useMousePosition is updated
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { useMousePosition } from "@/lib/mouse";
+import { useMousePosition } from "@/util/mouse";
 
 interface ParticlesProps {
 	className?: string;

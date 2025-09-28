@@ -1,5 +1,3 @@
-// This file is being moved to /src/app/components/nav.tsx
-// The content is the same as the original app/components/nav.tsx
 "use client";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
