@@ -1,30 +1,35 @@
 import Link from "next/link";
 import React from "react";
-import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import { getProjects } from "@/app/lib/projects";
 
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
+  const allProjects = await getProjects();
+
   const views = (
     await redis.mget<number[]>(
       ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
     )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  ).reduce(
+    (acc, v, i) => {
+      acc[allProjects[i].slug] = v ?? 0;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
   const featured = allProjects.find((project) => project.slug === "unkey")!;
   const top2 = allProjects.find((project) => project.slug === "planetfall")!;
   const top3 = allProjects.find((project) => project.slug === "highstorm")!;
   const sorted = allProjects
-    .filter((p) => p.published)
+    .filter((p) => p.meta.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
@@ -33,8 +38,8 @@ export default async function ProjectsPage() {
     )
     .sort(
       (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+        new Date(b.meta.date ?? Number.POSITIVE_INFINITY).getTime() -
+        new Date(a.meta.date ?? Number.POSITIVE_INFINITY).getTime(),
     );
 
   return (
@@ -57,11 +62,11 @@ export default async function ProjectsPage() {
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
+                    {featured.meta.date ? (
+                      <time dateTime={new Date(featured.meta.date).toISOString()}>
                         {Intl.DateTimeFormat(undefined, {
                           dateStyle: "medium",
-                        }).format(new Date(featured.date))}
+                        }).format(new Date(featured.meta.date))}
                       </time>
                     ) : (
                       <span>SOON</span>
@@ -79,10 +84,10 @@ export default async function ProjectsPage() {
                   id="featured-post"
                   className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                 >
-                  {featured.title}
+                  {featured.meta.title}
                 </h2>
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  {featured.description}
+                  {featured.meta.description}
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
                   <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
