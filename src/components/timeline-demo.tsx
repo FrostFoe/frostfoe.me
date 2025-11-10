@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
 import { timelineData } from "@/lib/content";
 
@@ -34,10 +35,12 @@ export function TimelineDemo() {
                 )}
                 <div className="grid grid-cols-2 gap-4">
                   {item.images.map((src, i) => (
-                    <img
+                    <Image
                       key={i}
                       src={src}
                       alt={`${item.title} image ${i + 1}`}
+                      width={400}
+                      height={300}
                       className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
                     />
                   ))}

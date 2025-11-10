@@ -10,7 +10,7 @@ export function LinkPreviewDemoSecond() {
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 py-10">
       <div className="w-full max-w-3xl flex flex-col items-center justify-center">
-        <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl text-center mb-10">
+        <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl text-center mb-10">
           {p1.prefix}{" "}
           <LinkPreview
             url={p1.url}
@@ -19,9 +19,9 @@ export function LinkPreviewDemoSecond() {
             {p1.linkText}
           </LinkPreview>{" "}
           {p1.suffix}
-        </p>
+        </div>
 
-        <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl text-center">
+        <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl text-center">
           {p2.prefix}{" "}
           <LinkPreview
             url={p2.linkOneUrl}
@@ -41,7 +41,7 @@ export function LinkPreviewDemoSecond() {
             {p2.linkTwoText}
           </LinkPreview>{" "}
           {p2.suffix}
-        </p>
+        </div>
       </div>
     </div>
   );
