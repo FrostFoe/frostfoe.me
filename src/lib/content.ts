@@ -78,20 +78,20 @@ export const timelineData = [
 
 export const linkPreviewContent = {
   paragraphOne: {
-    prefix: "Visit",
-    linkText: "Aceternity UI",
-    url: "https://ui.aceternity.com",
+    prefix: "Explore",
+    linkText: "FrostFoe API",
+    url: "https://api.frostfoe.me/",
     suffix: "for amazing Tailwind and Framer Motion components.",
     gradient: "from-purple-500 to-pink-500",
   },
   paragraphTwo: {
-    prefix: "I listen to",
-    linkOneText: "this guy",
+    prefix: "I hunt flags at",
+    linkOneText: "CTFtime.org",
     linkOneUrl:
-      "https://www.youtube.com/watch?v=S-z6vyR89Ig&list=RDMM&index=3",
+      "https://ctftime.org/",
     linkOneImg: "/images/imraan-hashmi.webp",
-    linkTwoPrefix: "and I watch",
-    linkTwoText: "this movie",
+    linkTwoPrefix: "and share writeups on",
+    linkTwoText: "GitHub",
     linkTwoUrl: "/templates",
     linkTwoImg: "/images/fight-club.webp",
     suffix: "twice a day.",
